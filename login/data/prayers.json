@@ -1,0 +1,522 @@
+{
+  "categories": [
+    {
+      "id": "marianas",
+      "name": "Orações Marianas",
+      "icon": "auto_stories",
+      "color": "#e91e63"
+    },
+    {
+      "id": "diarias",
+      "name": "Orações Diárias",
+      "icon": "schedule",
+      "color": "#2196f3"
+    },
+    {
+      "id": "santos",
+      "name": "Orações aos Santos",
+      "icon": "person",
+      "color": "#ff9800"
+    },
+    {
+      "id": "familia",
+      "name": "Orações da Família",
+      "icon": "family_restroom",
+      "color": "#4caf50"
+    },
+    {
+      "id": "curas",
+      "name": "Orações de Cura",
+      "icon": "healing",
+      "color": "#9c27b0"
+    },
+    {
+      "id": "emergencia",
+      "name": "Orações de Emergência",
+      "icon": "warning",
+      "color": "#f44336"
+    }
+  ],
+  "prayers": [
+    {
+      "id": 1,
+      "title": "Ave Maria",
+      "description": "A saudação angélica à Mãe de Deus.",
+      "content": "Ave Maria, cheia de graça, o Senhor é convosco, bendita sois Vós entre as mulheres e bendito é o fruto do Vosso ventre, Jesus. Santa Maria, Mãe de Deus, rogai por nós, pecadores, agora e na hora da nossa morte. Amém.",
+      "category": "marianas",
+      "length": "curta",
+      "estimated_time": "30s",
+      "biblical_ref": "Lucas 1:28",
+      "tags": ["Maria", "Intercessão", "Paz"],
+      "instruction": "Reze com calma, meditando no mistério da Encarnação."
+    },
+    {
+      "id": 2,
+      "title": "Pai Nosso",
+      "description": "A oração que o próprio Jesus nos ensinou.",
+      "content": "Pai Nosso que estais no céu, santificado seja o Vosso nome, venha a nós o Vosso reino, seja feita a Vossa vontade assim na terra como no céu. O pão nosso de cada dia nos dai hoje, perdoai-nos as nossas ofensas assim como nós perdoamos a quem nos tem ofendido, e não nos deixeis cair em tentação, mas livrai-nos do mal. Amém.",
+      "category": "diarias",
+      "length": "media",
+      "estimated_time": "45s",
+      "biblical_ref": "Mateus 6:9-13",
+      "tags": ["Essencial", "Adoração", "Perdão"],
+      "instruction": "A oração perfeita. Ideal para começar e terminar o seu dia."
+    },
+    {
+      "id": 6,
+      "title": "Oração de São Francisco",
+      "description": "Um clamor pela paz e pelo desprendimento.",
+      "content": "Senhor, fazei-me instrumento de vossa paz. Onde houver ódio, que eu leve o amor; onde houver ofensa, que eu leve o perdão; onde houver discórdia, que eu leve a união...",
+      "category": "santos",
+      "length": "longa",
+      "estimated_time": "2min",
+      "biblical_ref": "Mateus 5:9",
+      "tags": ["Paz", "Serviço", "Humildade"],
+      "instruction": "Excelente para momentos de conflito ou busca por serenidade."
+    },
+    {
+      "id": 8,
+      "title": "Oração pela Cura",
+      "description": "Súplica pela restauração da saúde física e espiritual.",
+      "content": "Senhor Jesus, creio que estais vivo e ressuscitado. Creio que estais realmente presente no Santíssimo Sacramento do Altar e em cada um de nós. Louvo-Vos e adoro-Vos. Dou-Vos graças, Senhor, por terdes vindo a mim como Pão vivo descido do céu. Vós sois a plenitude da vida, Vós sois a saúde dos enfermos. Senhor, hoje quero apresentar-Vos todos os meus males, porque Vós sois o mesmo ontem, hoje e sempre...",
+      "category": "curas",
+      "length": "longa",
+      "estimated_time": "3min",
+      "biblical_ref": "Jeremias 17:14",
+      "tags": ["Saúde", "Esperança", "Fortaleza"],
+      "instruction": "Reze em um lugar silencioso, entregando cada dor ao Senhor."
+    },
+    {
+      "id": 9,
+      "title": "Oração de Proteção (São Miguel Arcanjo)",
+      "description": "Defesa contra as ciladas do inimigo.",
+      "content": "São Miguel Arcanjo, defendei-nos no combate, sede o nosso refúgio contra as maldades e ciladas do demônio. Ordene-lhe Deus, instantemente o pedimos, e vós, príncipe da milícia celeste, pelo poder divino, precipitai no inferno a satanás e a todos os espíritos malignos que andam pelo mundo para perder as almas. Amém.",
+      "category": "emergencia",
+      "length": "media",
+      "estimated_time": "1min",
+      "biblical_ref": "Apocalipse 12:7",
+      "tags": ["Proteção", "Batalha Espiritual", "Força"],
+      "instruction": "Invoque a proteção de São Miguel ao sentir medo ou opressão."
+    },
+    {
+      "id": 10,
+      "title": "Magnificat",
+      "description": "Cântico de Maria em louvor ao Senhor.",
+      "content": "A minha alma engrandece ao meu Senhor\nE meu espírito exulta de alegria em Deus, meu Salvador!\nPorque olhou para a humildade de sua pobre serva;\ndoravante todas as gerações me chamarão bendita,\nPorque o Poderoso fez em mim maravilhas, Santo é o seu nome!\nManifestou o poder do seu braço\nDesconcertou os corações dos soberbos\nDerrubou do trono os poderosos,\ne exaltou os humildes.\nSaciou de bens os famintos,\ne despediu os ricos de mãos vazias.\nAcolheu a Israel, seu servo,\nlembrado de sua misericórdia;\nconforme prometera a nossos pais,\nem favor de Abraão e de sua posteridade, para sempre.\nGlória ao Pai, ao Filho, e ao Espírito Santo.\nAssim como era no princípio, agora e sempre, Amém.",
+      "category": "marianas",
+      "length": "media"
+    },
+    {
+      "id": 12,
+      "title": "Consagração a Nossa Senhora Aparecida",
+      "description": "Oração de consagração à Virgem Maria sob o título de Nossa Senhora Aparecida.",
+      "content": "Ó Maria Santíssima, que em vossa querida Imagem de Aparecida espalhais inúmeros benefícios sobre todo o Brasil; eu, embora indigno de pertencer ao número dos vossos filhos e filhas, mas cheio do desejo de participar dos benefícios de vossa misericórdia, prostrado a vossos pés, consagro-vos meu entendimento, para que sempre pense no amor que mereceis.\n\nConsagro-vos minha língua, para que sempre vos louve e propague vossa devoção.\n\nConsagro-vos meu coração, para que, depois de Deus, vos ame sobre todas as coisas.\n\nRecebei-me, ó Rainha incomparável, no ditoso número de vossos filhos e filhas.\n\nAcolhei-me debaixo de vossa proteção.\n\nSocorrei-me em todas as minhas necessidades espirituais e temporais e, sobretudo, na hora de minha morte.\n\nAbençoai-me, ó Mãe Celestial, e com vossa poderosa intercessão fortalecei-me em minha fraqueza, a fim de que, servindo-vos fielmente nesta vida, possa louvar-vos, amar-vos e dar-vos graças no céu, por toda eternidade.\n\nAssim seja.",
+      "category": "marianas",
+      "length": "longa"
+    },
+    {
+      "id": 13,
+      "title": "Ângelus",
+      "description": "Oração tradicional que recorda a Anunciação do Anjo Gabriel a Nossa Senhora.",
+      "content": "O Ângelus é uma oração muito antiga que faz memória da Anunciação do Anjo Gabriel à Nossa Senhora. É costume rezá-lo às 6h, 12h e 18h. Quem não puder guardar este horário, pode rezá-lo ao levantar, na hora do almoço e ao deitar.\n\nV/ O Anjo do Senhor anunciou a Maria,\nR/ E Ela concebeu do Espírito Santo.\nAve Maria...\n\nV/ Eis a escrava do Senhor.\nR/ Faça-se em mim segundo a Vossa palavra.\nAve Maria...\n\nV/ E o Verbo se fez Carne,\nR/ E habitou entre nós.\nAve Maria...\n\nV/ Rogai por nós, Santa Mãe de Deus,\nR/ Para que sejamos dignos das promessas de Cristo.\n\nOREMOS:\nInfundi, Senhor, em nossos corações, a Vossa graça, nós Vos suplicamos, a fim de que, tendo conhecido pela Anunciação do Anjo a encarnação de Jesus Cristo, Vosso Filho, pelos merecimentos da Sua Paixão e Morte na Cruz, sejamos conduzidos à glória da Ressurreição. Por Cristo, nosso Senhor. Amém.",
+      "category": "marianas",
+      "length": "longa"
+    },
+    {
+      "id": 14,
+      "title": "Salve Rainha",
+      "description": "Oração mariana tradicional pedindo a intercessão da Virgem Maria.",
+      "content": "Salve, Rainha, Mãe de misericórdia, vida, doçura e esperança nossa, salve!\n\nA vós bradamos, os degredados filhos de Eva;\na vós suspiramos, gemendo e chorando neste vale de lágrimas.\n\nEia, pois, advogada nossa, esses vossos olhos misericordiosos a nós volvei,\ne depois deste desterro mostrai-nos Jesus, bendito fruto do vosso ventre,\nó clemente, ó piedosa, ó doce sempre Virgem Maria!\n\nRogai por nós, Santa Mãe de Deus,\npara que sejamos dignos das promessas de Cristo.",
+      "category": "marianas",
+      "length": "media"
+    },
+    {
+      "id": 15,
+      "title": "Ladainha de Nossa Senhora",
+      "description": "Oração tradicional de invocação à Virgem Maria sob diversos títulos.",
+      "content": "Senhor, tende piedade de nós.\nJesus Cristo, tende piedade de nós.\nSenhor, tende piedade de nós.\n\nJesus Cristo, ouvi-nos.\nJesus Cristo, atendei-nos.\n\nPai celeste que sois Deus, tende piedade de nós.\nFilho, Redentor do mundo, que sois Deus, tende piedade de nós.\nEspírito Santo, que sois Deus, tende piedade de nós.\nSantíssima Trindade, que sois um só Deus, tende piedade de nós.\n\nSanta Maria, rogai por nós.\nSanta Mãe de Deus, rogai por nós.\nSanta Virgem das Virgens, rogai por nós.\nMãe de Jesus Cristo, rogai por nós.\nMãe da divina graça, rogai por nós.\nMãe puríssima, rogai por nós.\nMãe castíssima, rogai por nós.\nMãe imaculada, rogai por nós.\nMãe intacta, rogai por nós.\nMãe amável, rogai por nós.\nMãe admirável, rogai por nós.\nMãe do bom conselho, rogai por nós.\nMãe do Criador, rogai por nós.\nMãe do Salvador, rogai por nós.\n\nVirgem prudentíssima, rogai por nós.\nVirgem venerável, rogai por nós.\nVirgem louvável, rogai por nós.\nVirgem poderosa, rogai por nós.\nVirgem clemente, rogai por nós.\nVirgem fiel, rogai por nós.\n\nEspelho de justiça, rogai por nós.\nSede de sabedoria, rogai por nós.\nCausa da nossa alegria, rogai por nós.\nVaso espiritual, rogai por nós.\nVaso honorífico, rogai por nós.\nVaso insígne de devoção, rogai por nós.\nRosa mística, rogai por nós.\nTorre de Davi, rogai por nós.\nTorre de marfim, rogai por nós.\nCasa de ouro, rogai por nós.\nArca da aliança, rogai por nós.\nPorta do céu, rogai por nós.\nEstrela da manhã, rogai por nós.\n\nSaúde dos enfermos, rogai por nós.\nRefúgio dos pecadores, rogai por nós.\nConsoladora dos aflitos, rogai por nós.\nAuxílio dos cristãos, rogai por nós.\n\nRainha dos anjos, rogai por nós.\nRainha dos patriarcas, rogai por nós.\nRainha dos profetas, rogai por nós.\nRainha dos apóstolos, rogai por nós.\nRainha dos mártires, rogai por nós.\nRainha dos confessores, rogai por nós.\nRainha das virgens, rogai por nós.\nRainha de todos os santos, rogai por nós.\nRainha concebida sem pecado original, rogai por nós.\nRainha elevada ao céu, rogai por nós.\nRainha do sacratíssimo Rosário, rogai por nós.\nRainha da paz, rogai por nós.\n\nCordeiro de Deus, que tirais os pecados do mundo, perdoai-nos, Senhor.\nCordeiro de Deus, que tirais os pecados do mundo, ouvi-nos, Senhor.\nCordeiro de Deus, que tirais os pecados do mundo, tende piedade de nós.\n\nV. Rogai por nós, Santa Mãe de Deus,\nR. Para que sejamos dignos das promessas de Cristo.\n\nOremos:\nSenhor Deus, nós Vos suplicamos que concedais aos vossos servos perpétua saúde de alma e de corpo; e que, pela gloriosa intercessão da bem-aventurada sempre Virgem Maria, sejamos livres da presente tristeza e gozemos da eterna alegria.\n\nPor Cristo, nosso Senhor.\nAmém.",
+      "category": "marianas",
+      "length": "longa"
+    },
+    {
+      "id": 16,
+      "title": "Consagração ao Imaculado Coração de Maria",
+      "description": "Oração de entrega e devoção ao Imaculado Coração da Virgem Maria.",
+      "content": "Ó Coração Imaculado de Maria,\nrepleto de bondade, mostrai-nos o vosso amor.\n\nA chama do vosso Coração, ó Maria, desça sobre todos os homens.\nNós vos amamos infinitamente!\n\nImprimi nos nossos corações o verdadeiro amor,\npara que sintamos o desejo de vos buscar incessantemente.\n\nÓ Maria, vós que tendes um coração suave e humilde,\nlembrai-vos de nós quando cairmos no pecado.\n\nVós sabeis que todos os homens pecam.\nConcedei que, por meio de vosso Imaculado e Materno Coração,\nsejamos curados de toda doença espiritual.\n\nFazei que possamos sempre contemplar a bondade de vosso Materno Coração\ne nos convertamos por meio da chama do vosso Coração.\n\nAmém.",
+      "category": "marianas",
+      "length": "media"
+    },
+
+    {
+      "id": 18,
+      "title": "Ave-Maria",
+      "description": "Saudação mariana tradicional.",
+      "content": "Ave Maria, cheia de graça, o Senhor é convosco...\nAmém.",
+      "category": "diarias",
+      "length": "curta"
+    },
+    {
+      "id": 19,
+      "title": "Glória ao Pai",
+      "description": "Louvor à Santíssima Trindade.",
+      "content": "Glória ao Pai, ao Filho e ao Espírito Santo...\nAmém.",
+      "category": "diarias",
+      "length": "curta"
+    },
+
+    {
+      "id": 20,
+      "title": "Credo Niceno-Constantinopolitano",
+      "description": "Profissão de fé da Igreja.",
+      "content": "Creio em um só Deus, Pai todo-poderoso, criador do céu e da terra...\nAmém.",
+      "category": "diarias",
+      "length": "longa"
+    },
+    {
+      "id": 22,
+      "title": "Ato de Contrição",
+      "description": "Oração de arrependimento.",
+      "content": "Meu Deus, porque sois infinitamente bom, tenho muita pena de vos ter ofendido...\nAmém.",
+      "category": "diarias",
+      "length": "media"
+    },
+    {
+      "id": 23,
+      "title": "Confesso a Deus",
+      "description": "Oração penitencial da Missa.",
+      "content": "Confesso a Deus todo-poderoso e a vós, irmãos...\nAmém.",
+      "category": "diarias",
+      "length": "media"
+    },
+
+    {
+      "id": 27,
+      "title": "Vinde Espírito Santo",
+      "description": "Invocação ao Espírito Santo.",
+      "content": "Vinde, Espírito Santo, enchei os corações dos vossos fiéis...\nAmém.",
+      "category": "diarias",
+      "length": "curta"
+    },
+
+    {
+      "id": 30,
+      "title": "Credo dos Apóstolos",
+      "description": "Profissão de fé tradicional da Igreja Católica.",
+      "content": "Creio em Deus, Pai todo-poderoso, Criador do Céu e da Terra.\n\nE em Jesus Cristo, seu único Filho, nosso Senhor,\nque foi concebido pelo poder do Espírito Santo;\nnasceu da Virgem Maria;\npadeceu sob Pôncio Pilatos,\nfoi crucificado, morto e sepultado;\ndesceu à mansão dos mortos;\nressuscitou ao terceiro dia;\nsubiu aos Céus;\nestá sentado à direita de Deus Pai todo-poderoso,\nde onde há de vir a julgar os vivos e os mortos.\n\nCreio no Espírito Santo;\nna santa Igreja Católica;\nna comunhão dos santos;\nna remissão dos pecados;\nna ressurreição da carne;\ne na vida eterna.\n\nAmém.",
+      "category": "diarias",
+      "length": "longa"
+    },
+    {
+      "id": 17,
+      "title": "Oração de São José",
+      "description": "Oração de intercessão a São José, padroeiro da Igreja Universal.",
+      "content": "Ó glorioso São José, esposo da Virgem Maria, guardião do Redentor, terror dos demônios, luz dos fiéis e sustentáculo das famílias, a vós recorro em minhas necessidades e, confiando na vossa poderosa intercessão, peço-vos que me obtenhais do Divino Coração de Jesus todas as graças necessárias para minha salvação e para o cumprimento da minha missão neste mundo. Amém.",
+      "category": "santos",
+      "length": "media"
+    },
+    {
+      "id": 40,
+      "title": "São Miguel Arcanjo",
+      "description": "Oração de proteção espiritual.",
+      "content": "São Miguel Arcanjo, defendei-nos no combate,\nsede nosso refúgio contra a maldade e as ciladas do demônio.\nOrdene-lhe Deus, instantemente o pedimos,\ne vós, príncipe da milícia celeste,\npelo poder divino, precipitai no inferno a Satanás\ne a todos os espíritos malignos que andam pelo mundo\npara perder as almas.\n\nAmém.",
+      "category": "santos",
+      "length": "media"
+    },
+    {
+      "id": 41,
+      "title": "Santo Anjo da Guarda",
+      "description": "Oração ao anjo protetor.",
+      "content": "Santo Anjo do Senhor, meu zeloso guardador,\nse a ti me confiou a piedade divina,\nsempre me rege, me guarda, me governa e me ilumina.\n\nAmém.",
+      "category": "santos",
+      "length": "curta"
+    },
+
+    {
+      "id": 43,
+      "title": "São Francisco de Assis",
+      "description": "Oração pela paz.",
+      "content": "Senhor, fazei-me instrumento de vossa paz.\nOnde houver ódio, que eu leve o amor;\nonde houver ofensa, que eu leve o perdão;\nonde houver discórdia, que eu leve a união.\n\nAmém.",
+      "category": "santos",
+      "length": "media"
+    },
+    {
+      "id": 44,
+      "title": "São Bento",
+      "description": "Oração de proteção contra o mal.",
+      "content": "A Cruz Sagrada seja minha luz,\nnão seja o dragão meu guia.\nRetira-te, Satanás!\nNunca me aconselhes coisas vãs.\nÉ mau o que me ofereces,\nbebe tu mesmo o teu veneno.\n\nAmém.",
+      "category": "santos",
+      "length": "media"
+    },
+    {
+      "id": 45,
+      "title": "Santa Rita de Cássia",
+      "description": "Oração para causas impossíveis.",
+      "content": "Ó poderosa e gloriosa Santa Rita,\nchamada Santa dos impossíveis,\nadvogada nos casos desesperados,\nintercedei por mim.\n\nAmém.",
+      "category": "santos",
+      "length": "media"
+    },
+    {
+      "id": 46,
+      "title": "Santo Expedito",
+      "description": "Oração para causas urgentes.",
+      "content": "Meu Santo Expedito das causas justas e urgentes,\nintercedei por mim junto a Nosso Senhor Jesus Cristo,\nsocorrei-me nesta hora de aflição e desespero.\n\nAmém.",
+      "category": "santos",
+      "length": "media"
+    },
+    {
+      "id": 47,
+      "title": "São Judas Tadeu",
+      "description": "Oração para causas difíceis.",
+      "content": "Glorioso São Judas Tadeu,\napóstolo fiel e servo de Jesus,\no nome do traidor foi causa de esquecimento,\nmas a Igreja vos honra e invoca universalmente.\n\nAmém.",
+      "category": "santos",
+      "length": "media"
+    },
+    {
+      "id": 48,
+      "title": "Santa Teresinha",
+      "description": "Oração da pequena via.",
+      "content": "Ó Santa Teresinha do Menino Jesus,\nque passastes pela terra fazendo o bem,\najudai-me a confiar no amor de Deus.\n\nAmém.",
+      "category": "santos",
+      "length": "curta"
+    },
+    {
+      "id": 49,
+      "title": "São João Paulo II",
+      "description": "Oração pela fé e missão.",
+      "content": "Ó São João Paulo II,\nintercedei por nós,\nfortalecei nossa fé\ne ajudai-nos a seguir a Cristo com coragem.\n\nAmém.",
+      "category": "santos",
+      "length": "curta"
+    },
+
+    {
+      "id": 60,
+      "title": "Oração pela Família",
+      "description": "Oração pedindo a bênção de Deus sobre a família.",
+      "content": "Senhor, nós Vos agradecemos pela nossa família.\nAjudai-nos a viver em amor, união e paz.\nFazei do nosso lar um lugar de fé, esperança e caridade.\n\nAmém.",
+      "category": "familia",
+      "length": "curta"
+    },
+    {
+      "id": 61,
+      "title": "Consagração da Família",
+      "description": "Entrega da família a Deus.",
+      "content": "Senhor Deus, nós Vos consagramos nossa família.\nColocamos em Vossas mãos nossas vidas, nossos planos e nossos sonhos.\nProtegei-nos de todo mal e conduzi-nos pelo caminho do bem.\n\nAmém.",
+      "category": "familia",
+      "length": "media"
+    },
+    {
+      "id": 62,
+      "title": "Oração pelos Pais",
+      "description": "Oração em favor dos pais.",
+      "content": "Senhor, abençoai nossos pais,\ndai-lhes saúde, paz e sabedoria.\nRecompensai todo o amor e dedicação que têm por nós.\n\nAmém.",
+      "category": "familia",
+      "length": "curta"
+    },
+    {
+      "id": 63,
+      "title": "Oração pelos Filhos",
+      "description": "Oração pedindo proteção para os filhos.",
+      "content": "Senhor, cuidai dos nossos filhos,\nguiai seus passos e protegei-os de todo mal.\nConcedei-lhes sabedoria e fé.\n\nAmém.",
+      "category": "familia",
+      "length": "curta"
+    },
+    {
+      "id": 64,
+      "title": "Oração pelo Casamento",
+      "description": "Oração pela união do casal.",
+      "content": "Senhor, abençoai nosso casamento,\nfortalecei nosso amor e nossa união.\nAjudai-nos a viver na fidelidade, no respeito e na compreensão.\n\nAmém.",
+      "category": "familia",
+      "length": "media"
+    },
+    {
+      "id": 65,
+      "title": "Oração da Sagrada Família",
+      "description": "Oração inspirada na família de Nazaré.",
+      "content": "Jesus, Maria e José,\nabençoai nossa família.\nFazei dela um reflexo do amor e da união da Sagrada Família.\n\nAmém.",
+      "category": "familia",
+      "length": "curta"
+    },
+    {
+      "id": 66,
+      "title": "Oração pela Paz no Lar",
+      "description": "Oração para trazer paz ao ambiente familiar.",
+      "content": "Senhor, fazei reinar a paz em nosso lar.\nAfasta de nós as brigas, a falta de compreensão e a tristeza.\nEnchei nosso coração de amor.\n\nAmém.",
+      "category": "familia",
+      "length": "media"
+    },
+    {
+      "id": 67,
+      "title": "Oração de Proteção da Família",
+      "description": "Oração pedindo proteção divina.",
+      "content": "Senhor, protegei nossa família de todo mal.\nLivrai-nos dos perigos visíveis e invisíveis.\nGuardai-nos sob Vossa proteção.\n\nAmém.",
+      "category": "familia",
+      "length": "media"
+    },
+    {
+      "id": 68,
+      "title": "Oração de Gratidão pela Família",
+      "description": "Oração de agradecimento.",
+      "content": "Senhor, obrigado pela minha família.\nObrigado pelo amor, pelo cuidado e pela vida que compartilhamos.\nQue possamos sempre permanecer unidos.\n\nAmém.",
+      "category": "familia",
+      "length": "curta"
+    },
+    {
+      "id": 70,
+      "title": "Oração de Cura Interior",
+      "description": "Oração pedindo cura emocional e espiritual.",
+      "content": "Senhor Jesus,\nentrai em meu coração e curai todas as minhas feridas.\nCurai minhas dores, meus traumas e minhas lembranças difíceis.\nDai-me paz, esperança e alegria.\n\nAmém.",
+      "category": "curas",
+      "length": "media"
+    },
+    {
+      "id": 71,
+      "title": "Oração pela Cura Física",
+      "description": "Pedido de cura do corpo.",
+      "content": "Senhor Deus,\nVós sois o médico dos médicos.\nEstendei Vossa mão sobre mim e curai meu corpo.\nRestaurai minha saúde e fortalecei minha fé.\n\nAmém.",
+      "category": "curas",
+      "length": "media"
+    },
+    {
+      "id": 72,
+      "title": "Oração de Cura Espiritual",
+      "description": "Pedido de libertação do pecado.",
+      "content": "Senhor,\nlibertai-me de tudo aquilo que me afasta de Vós.\nPurificai meu coração e renovai meu espírito.\nConduzi-me pelo caminho da santidade.\n\nAmém.",
+      "category": "curas",
+      "length": "media"
+    },
+    {
+      "id": 73,
+      "title": "Oração pela Cura da Ansiedade",
+      "description": "Pedido de paz interior.",
+      "content": "Senhor,\nacalmai meu coração inquieto.\nTirai de mim a ansiedade e o medo.\nEnchei-me de confiança em Vós.\n\nAmém.",
+      "category": "curas",
+      "length": "curta"
+    },
+    {
+      "id": 74,
+      "title": "Oração pela Cura da Tristeza",
+      "description": "Pedido de alegria e consolo.",
+      "content": "Senhor,\nvisitai meu coração triste.\nEnchei-me de Vossa luz e alegria.\nQue eu encontre em Vós a verdadeira paz.\n\nAmém.",
+      "category": "curas",
+      "length": "curta"
+    },
+    {
+      "id": 75,
+      "title": "Oração pela Cura de Relacionamentos",
+      "description": "Pedido de restauração de vínculos.",
+      "content": "Senhor,\nrestaurai meus relacionamentos.\nCurai as feridas causadas por mágoas e ressentimentos.\nEnsinai-me a perdoar e a amar.\n\nAmém.",
+      "category": "curas",
+      "length": "media"
+    },
+    {
+      "id": 76,
+      "title": "Oração de Cura e Libertação",
+      "description": "Pedido de libertação espiritual.",
+      "content": "Senhor Jesus,\nlibertai-me de todo mal e de toda influência negativa.\nProtegei-me com Vosso amor e fortalecei minha fé.\n\nAmém.",
+      "category": "curas",
+      "length": "media"
+    },
+    {
+      "id": 77,
+      "title": "Oração pela Cura da Alma",
+      "description": "Pedido de renovação interior.",
+      "content": "Senhor,\ncurai minha alma e renovai minha vida.\nFazei de mim uma nova criatura,\ncheia de fé, esperança e amor.\n\nAmém.",
+      "category": "curas",
+      "length": "media"
+    },
+    {
+      "id": 78,
+      "title": "Oração de Entrega e Cura",
+      "description": "Entrega total a Deus.",
+      "content": "Senhor,\nentrego a Vós todas as minhas dores e preocupações.\nConfio plenamente em Vosso amor e misericórdia.\nCuidai de mim e curai-me.\n\nAmém.",
+      "category": "curas",
+      "length": "media"
+    },
+
+    {
+      "id": 80,
+      "title": "Oração em Momentos de Desespero",
+      "description": "Para quando tudo parece perdido.",
+      "content": "Senhor meu Deus,\nvenho a Vós neste momento de desespero.\nSinto-me perdido e sem forças,\nmas confio que estais comigo.\n\nAjudai-me a superar esta situação\ne dai-me coragem para continuar.\n\nAmém.",
+      "category": "emergencia",
+      "length": "media"
+    },
+    {
+      "id": 81,
+      "title": "Oração em Momentos de Medo",
+      "description": "Para vencer o medo e a insegurança.",
+      "content": "Senhor,\ntirai de mim todo medo e insegurança.\nEnchei meu coração de confiança e paz.\n\nSei que estais comigo,\ne nada temerei.\n\nAmém.",
+      "category": "emergencia",
+      "length": "curta"
+    },
+    {
+      "id": 82,
+      "title": "Oração em Situação Difícil",
+      "description": "Para enfrentar dificuldades.",
+      "content": "Senhor,\nestou passando por uma situação difícil.\nDai-me sabedoria para agir,\npaciência para suportar\ne fé para confiar em Vós.\n\nAmém.",
+      "category": "emergencia",
+      "length": "media"
+    },
+    {
+      "id": 83,
+      "title": "Oração de Confiança em Deus",
+      "description": "Entrega total a Deus.",
+      "content": "Senhor,\nentrego tudo em Vossas mãos.\nConfio em Vosso amor e em Vosso plano.\n\nConduzi minha vida\ne fazei o melhor por mim.\n\nAmém.",
+      "category": "emergencia",
+      "length": "curta"
+    },
+    {
+      "id": 84,
+      "title": "Oração contra a Angústia",
+      "description": "Para aliviar o coração.",
+      "content": "Senhor,\nmeu coração está angustiado.\nAliviai minha dor e trazei-me paz.\n\nAjudai-me a confiar em Vós\nem todos os momentos.\n\nAmém.",
+      "category": "emergencia",
+      "length": "curta"
+    },
+    {
+      "id": 85,
+      "title": "Oração em Tempo de Aflição",
+      "description": "Para momentos de sofrimento.",
+      "content": "Senhor,\nna minha aflição clamo a Vós.\nNão me abandoneis neste momento difícil.\n\nSede meu refúgio e minha força.\n\nAmém.",
+      "category": "emergencia",
+      "length": "curta"
+    },
+    {
+      "id": 86,
+      "title": "Oração por Socorro Imediato",
+      "description": "Pedido urgente de ajuda.",
+      "content": "Senhor,\nsocorrei-me rapidamente.\nPreciso de Vossa ajuda agora.\n\nVinde em meu auxílio\ncom Vosso poder e misericórdia.\n\nAmém.",
+      "category": "emergencia",
+      "length": "curta"
+    },
+    {
+      "id": 87,
+      "title": "Oração de Entrega Total",
+      "description": "Entrega completa a Deus.",
+      "content": "Senhor,\nentrego a Vós tudo o que estou vivendo.\nMinhas dores, meus medos e minhas dúvidas.\n\nConfio em Vós plenamente.\nFazei a Vossa vontade.\n\nAmém.",
+      "category": "emergencia",
+      "length": "media"
+    },
+    {
+      "id": 88,
+      "title": "Oração pela Paz Interior",
+      "description": "Para encontrar serenidade.",
+      "content": "Senhor,\ndai-me paz no coração.\nSilenciai minhas preocupações\ne acalmai minha mente.\n\nQue eu descanse em Vós.\n\nAmém.",
+      "category": "emergencia",
+      "length": "curta"
+    },
+
+   {
+  "id": 90,
+  "title": "Oração a Nossa Senhora de Guadalupe",
+  "description": "Clame pela proteção e intercessão da Virgem de Guadalupe.",
+  "content": "Perfeita, sempre Virgem Santa Maria, Mãe do Verdadeiro Deus, por quem se vive. Tu, que, na verdade, és nossa Mãe Compassiva,te buscamos e te clamamos.Escuta com piedade nosso pranto, nossas tristezas.Cura nossas penas, nossas misérias e dores.Tu, que és nossa doce e amorosa Mãe,acolhe-nos no aconchego do teu manto, o carinho de teus braços.Que nada nos aflija nem perturbe nosso coração.Mostra-nos e manifesta-nos a teu amado Filho, para que n’Ele e com Ele encontremos nossa salvação e a salvação do mundo. Santíssima Virgem Maria de Guadalupe, Faz-nos mensageiros teus, mensageiros da Palavra e da vontade de Deus. Amém.",
+  "category": "marianas",
+  "length": "media",
+  "estimated_time": "1min",
+  "biblical_ref": "Lucas 1:28",
+  "tags": ["Maria", "Guadalupe", "Proteção", "Consolo"],
+  "instruction": "Reze com fé, entregando suas dores e confiando na intercessão de Maria."
+}
+  ]
+}

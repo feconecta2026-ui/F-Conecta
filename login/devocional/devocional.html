@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Devocional - FéConecta</title>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/theme.css" />
+  <link rel="stylesheet" href="../js/sidebar-global.css" />
+  <link rel="stylesheet" href="devocional.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="app-wrapper">
+      <aside id="sidebar"></aside>
+
+      <main class="main-content">
+        <div class="content-area">
+          <header class="content-header">
+            <div class="header-content">
+              <h1 class="page-title">Devoção Diária</h1>
+              <p class="page-date">Segunda-feira, 28 de Outubro de 2024</p>
+            </div>
+          </header>
+
+          <div class="content-grid">
+            <div class="main-column">
+              <div class="calendar-card">
+                <div class="calendar-header">
+                  <h2 class="calendar-title">Outubro 2024</h2>
+                </div>
+                <div class="calendar-grid">
+                  <div class="weekday-header">Dom</div><div class="weekday-header">Seg</div><div class="weekday-header">Ter</div><div class="weekday-header">Qua</div><div class="weekday-header">Qui</div><div class="weekday-header">Sex</div><div class="weekday-header">Sáb</div>
+                  <div class="calendar-day inactive">29</div><div class="calendar-day inactive">30</div><div class="calendar-day">1</div><div class="calendar-day active"><span class="day-number">28</span><span class="saint-name">S. Judas Tadeu</span></div>
+                </div>
+              </div>
+
+              <div class="reflection-card">
+                <h1 class="reflection-title">Reflexão sobre o Evangelho de João</h1>
+                <article class="reflection-content">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero.</p>
+                  <blockquote class="bible-quote">"Porque Deus amou o mundo de tal maneira que deu o seu Filho unigênito..."</blockquote>
+                  <p class="verse-source">Fonte: Evangelho de João 3:16</p>
+                </article>
+              </div>
+            </div>
+
+            <aside class="sidebar-column">
+              <div class="saint-card">
+                <h2 class="saint-title">Santo do Dia</h2>
+                <div class="saint-content">
+                  <h3 class="saint-name">São Judas Tadeu</h3>
+                  <p class="saint-role">Patrono das Causas Perdidas</p>
+                  <a class="saint-link" href="../vida/vida.html">Ler a História</a>
+                </div>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script src="../js/app-config.js"></script>
+  <script src="../js/app-state.js"></script>
+  <script src="../js/app-ui.js"></script>
+  <script>
+    FeUI.protectPage();
+    FeUI.renderSidebar("devocional");
+    FeState.applyUserToPage();
+  </script>
+</body>
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html class="light" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Vida dos Santos</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "background": "#D9C7B3",
+              "secondary": "#B89A7A",
+              "highlight": "#C8A265",
+              "card": "#F3ECE4",
+              "text-main": "#4E3B2E",
+              "text-secondary": "#6C5A4B",
+            },
+            fontFamily: {
+              "display": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background font-display text-text-main">
+<div class="flex h-screen">
+<aside class="flex w-64 flex-col border-r border-highlight/20 bg-card p-4">
+<div class="flex items-center gap-3 p-2">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="User avatar image" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBm-JZpoiyPaMpg0-Ejwu82cBYoCb6Bv6oe8lxV-zSUTQjH2D-c5HAt7AQ2-caTmNEIus6XJxMCjZbofIxVOjAbEwofV-ejjQF2YPwdsPDt-lPSpVI_JK-Y_RqOB1VRrHq46NGaVuFQ6PKWq_AhOCfO69R_hipd1DKK-UlQ5xN-m2Zm2XSMgeQT_T_d99eK6M-RCKtdTblqnZVdAO9oE2iil8dCnyCvP6raGRku3B0qiuRGefmddrtWwff2pzwDe1qoHWTCqCdrU-w");'></div>
+<div class="flex flex-col">
+<h1 class="text-base font-semibold text-text-main">José da Silva</h1>
+<p class="text-sm font-normal text-text-secondary">jose.silva@email.com</p>
+</div>
+</div>
+<nav class="mt-8 flex flex-1 flex-col justify-between">
+<div class="flex flex-col gap-2">
+<a class="flex items-center gap-3 rounded-lg px-3 py-2 text-text-secondary hover:bg-highlight/20 hover:text-text-main" href="#">
+<span class="material-symbols-outlined">home</span>
+<p class="text-sm font-medium">Início</p>
+</a>
+<a class="flex items-center gap-3 rounded-lg bg-highlight/30 px-3 py-2 text-text-main" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">auto_stories</span>
+<p class="text-sm font-medium">Vida dos Santos</p>
+</a>
+<a class="flex items-center gap-3 rounded-lg px-3 py-2 text-text-secondary hover:bg-highlight/20 hover:text-text-main" href="#">
+<span class="material-symbols-outlined">health_cross</span>
+<p class="text-sm font-medium">Orações</p>
+</a>
+<a class="flex items-center gap-3 rounded-lg px-3 py-2 text-text-secondary hover:bg-highlight/20 hover:text-text-main" href="#">
+<span class="material-symbols-outlined">folded_hands</span>
+<p class="text-sm font-medium">Santo Rosário</p>
+</a>
+</div>
+<div class="flex flex-col gap-1">
+<a class="flex items-center gap-3 rounded-lg px-3 py-2 text-text-secondary hover:bg-highlight/20 hover:text-text-main" href="#">
+<span class="material-symbols-outlined">settings</span>
+<p class="text-sm font-medium">Configurações</p>
+</a>
+</div>
+</nav>
+</aside>
+<main class="flex-1 overflow-y-auto">
+<div class="mx-auto max-w-7xl p-6 lg:p-8">
+<div class="flex flex-wrap items-center justify-between gap-4">
+<div class="flex flex-col">
+<p class="text-4xl font-black tracking-tighter text-text-main">Vida dos Santos</p>
+<p class="mt-1 text-base font-normal text-text-secondary">Explore biografias, milagres e ensinamentos dos pilares da nossa fé.</p>
+</div>
+</div>
+<div class="mt-6 flex flex-col gap-4 md:flex-row md:items-center">
+<div class="flex-1">
+<label class="flex h-12 w-full flex-col">
+<div class="flex h-full w-full flex-1 items-stretch rounded-xl shadow-sm">
+<div class="flex items-center justify-center rounded-l-xl border border-r-0 border-secondary/50 bg-card pl-4 text-text-secondary">
+<span class="material-symbols-outlined">search</span>
+</div>
+<input class="form-input h-full min-w-0 flex-1 resize-none overflow-hidden rounded-r-xl border border-l-0 border-secondary/50 bg-card px-4 text-base font-normal leading-normal text-text-main placeholder:text-text-secondary focus:border-highlight focus:outline-0 focus:ring-2 focus:ring-highlight/50" placeholder="Buscar santo pelo nome..." value=""/>
+</div>
+</label>
+</div>
+<div class="flex flex-wrap items-center gap-3">
+<button class="flex h-12 shrink-0 items-center justify-center gap-x-2 rounded-xl bg-card px-4 text-text-main border border-secondary/50 hover:bg-secondary/20 hover:border-highlight shadow-sm">
+<span class="material-symbols-outlined text-xl">calendar_month</span>
+<p class="text-sm font-medium">Mês da Festividade</p>
+<span class="material-symbols-outlined text-xl">expand_more</span>
+</button>
+<button class="flex h-12 shrink-0 items-center justify-center gap-x-2 rounded-xl bg-card px-4 text-text-main border border-secondary/50 hover:bg-secondary/20 hover:border-highlight shadow-sm">
+<span class="material-symbols-outlined text-xl">shield</span>
+<p class="text-sm font-medium">Mártires</p>
+<span class="material-symbols-outlined text-xl">expand_more</span>
+</button>
+<button class="flex h-12 shrink-0 items-center justify-center gap-x-2 rounded-xl bg-card px-4 text-text-main border border-secondary/50 hover:bg-secondary/20 hover:border-highlight shadow-sm">
+<span class="material-symbols-outlined text-xl">school</span>
+<p class="text-sm font-medium">Doutores da Igreja</p>
+<span class="material-symbols-outlined text-xl">expand_more</span>
+</button>
+<button class="flex h-12 shrink-0 items-center justify-center gap-x-2 rounded-xl bg-card px-4 text-text-main border border-secondary/50 hover:bg-secondary/20 hover:border-highlight shadow-sm">
+<span class="material-symbols-outlined text-xl">group</span>
+<p class="text-sm font-medium">Padroeiros</p>
+<span class="material-symbols-outlined text-xl">expand_more</span>
+</button>
+</div>
+</div>
+<div class="mt-8 grid grid-cols-[repeat(auto-fill,minmax(200px,1fr))] gap-6">
+<div class="group flex cursor-pointer flex-col overflow-hidden rounded-xl bg-card shadow-sm">
+<div class="aspect-[3/4] w-full bg-cover bg-center bg-no-repeat transition-transform duration-300 group-hover:scale-105" data-alt="Imagem de São Francisco de Assis" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAqIsJyiKgzenaS2iPV3K5m4ZvRLx1xTNbC5ebCGD3wfSxjfRzoaxn2OhmQi0vyfzGiBlTKtPEu_y9kmaocqr_lmQ1eBKMg1NftzrmseYlmOLzeZsu4ppGqSu3PIGbWYgyUeZDZM9_iA577GRM0pZG9WBjdMLcaQDCber9Qlo98ah2FDs_rp9LGglgPLa81jPUB3LQgvSImv1xhIiBO18JsXvNYlZUedchOIMJ6QW1wdatObQRDMDCUL4p43WwGLMzCzWZ9ORIw1v8');"></div>
+<div class="p-4">
+<p class="text-base font-semibold text-text-main">São Francisco de Assis</p>
+<p class="text-sm text-text-secondary">Festa em 4 de Outubro</p>
+</div>
+</div>
+<div class="group flex cursor-pointer flex-col overflow-hidden rounded-xl bg-card shadow-sm">
+<div class="aspect-[3/4] w-full bg-cover bg-center bg-no-repeat transition-transform duration-300 group-hover:scale-105" data-alt="Imagem de Santa Teresinha do Menino Jesus" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCO3mkGV-GvPedq_zATTGhVEkZqHabU_vDMvEsTEfxLz9Fztt1iAf8xAZZkbicOxoJtT78RN01EqjRfr6ZNurIVyT2IGFigtdgYHVMjnxipdMAfsi0wSt8KDHic_8-5TGRAgaNORGgwkJvb-h1k_pcZ24q8iAUpRV3F8sZmciVuDpTEfqcD22GiZGAjlRxO22DtmbeMs8FbIjnz4EhvvBBBo4oQmCnCKGKm2oDX1TVmoQuXovH-7K4cZ_5BLvh4KMxdUahJWgx1Q5c');"></div>
+<div class="p-4">
+<p class="text-base font-semibold text-text-main">Santa Teresinha do Menino Jesus</p>
+<p class="text-sm text-text-secondary">Festa em 1 de Outubro</p>
+</div>
+</div>
+<div class="group flex cursor-pointer flex-col overflow-hidden rounded-xl bg-card shadow-sm">
+<div class="aspect-[3/4] w-full bg-cover bg-center bg-no-repeat transition-transform duration-300 group-hover:scale-105" data-alt="Imagem de Santo Agostinho" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAJKX27qXUAtyB9EtcQ55EbkCZipwJz4SfQCDFQxFF4rMLhuGhYTzGGprccyLGZY_aSbHaP-pxIsiIS04iXylEyVKDOTOex0QqxNET_jGTaZ8WDWD0aUeUNnqDj-L3EFDIsSC_cSpiI3YTe_5M3fpMK9VrfgOJWSHhAD6pYO-yngbx6RjtBNxp6WxKDKoiIW0TyNtXgBuSopAHmF8wWuofw-9udXdsYe0maPKxjDod8ZDYPybW-QHQ-xP4cBqeWawEpZVBZ-UameTs');"></div>
+<div class="p-4">
+<p class="text-base font-semibold text-text-main">Santo Agostinho</p>
+<p class="text-sm text-text-secondary">Festa em 28 de Agosto</p>
+</div>
+</div>
+<div class="group flex cursor-pointer flex-col overflow-hidden rounded-xl bg-card shadow-sm">
+<div class="aspect-[3/4] w-full bg-cover bg-center bg-no-repeat transition-transform duration-300 group-hover:scale-105" data-alt="Imagem de Santa Clara de Assis" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCts2geA0pzgASwiFZOZNbGqUmux7cT_SoZax_VL-j71QzIDXpzo8bw4CEH7KP1I2p21C0vatV2OJQYdTKyuOkCWFxmQBlT-c5_SqLHa9Yj3mQZcMi1TDuUfm5gldqkub1QN34dLiigvRS7seSIdIPX1wXeE2u25oM6JJI_ngJ1paXBewZdo3S-NUMph2dbv1XPYW_l9R774ReDCt8qQwMdtnwd1iXdqHUVop313CkqPs9D3DWHK5V_PZJRuwnnZziL5rGV7tAh_aU');"></div>
+<div class="p-4">
+<p class="text-base font-semibold text-text-main">Santa Clara de Assis</p>
+<p class="text-sm text-text-secondary">Festa em 11 de Agosto</p>
+</div>
+</div>
+<div class="group flex cursor-pointer flex-col overflow-hidden rounded-xl bg-card shadow-sm">
+<div class="aspect-[3/4] w-full bg-cover bg-center bg-no-repeat transition-transform duration-300 group-hover:scale-105" data-alt="Imagem de São Bento de Núrsia" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBkXqMB0UFqeIkUI4ckCAJb_mtLrtU0ezJMW5Zv-QIB1znOHl9NRtBViXr0nzFyflQK1b7wKJc4Calg6y1W02xsfSkQkHOIZKIhV43V6k7r3TjhhNKqs5iovBgX9CB3CzMriOmyPJHabOifpqqdDLIAShaNas8YmKSygd-xUC4ONM3EhQfTZd6-Ydn7UsgwhPDc3x9Xwus-B6wfVTgVWuMrlqPXN83TBLTLJj1emsOOGGg6RXq-CldxLjRrd5W93UFXN2DI4i_ZTNk');"></div>
+<div class="p-4">
+<p class="text-base font-semibold text-text-main">São Bento de Núrsia</p>
+<p class="text-sm text-text-secondary">Festa em 11 de Julho</p>
+</div>
+</div>
+<div class="group flex cursor-pointer flex-col overflow-hidden rounded-xl bg-card shadow-sm">
+<div class="aspect-[3/4] w-full bg-cover bg-center bg-no-repeat transition-transform duration-300 group-hover:scale-105" data-alt="Imagem de Santa Catarina de Sena" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAiZ9uhyoCz4T8I6z_No7-GZIFayhxTO2c6Mjgl7RGrbu2-frLqy2S7wsmBjeu8eJ9ycJPemIzQyTGCoAZdLw-XhtuN0N04SHljWp1ne4nFRU6_rqgnBi1dsr1_z2dOJoCjbEA069zy-XvlfRyO4s1QnJeiqowmQEcLMVgrFRPnQon_4FPnq991MimJ05E5UOwijwrPRNDMQaAeuH6LKdVgFDY3i-yWFa459oBhcysoaLXbLvVtbeZ5iZQyj1NhhYTosgZUv4jVFG0');"></div>
+<div class="p-4">
+<p class="text-base font-semibold text-text-main">Santa Catarina de Sena</p>
+<p class="text-sm text-text-secondary">Festa em 29 de Abril</p>
+</div>
+</div>
+<div class="group flex cursor-pointer flex-col overflow-hidden rounded-xl bg-card shadow-sm">
+<div class="aspect-[3/4] w-full bg-cover bg-center bg-no-repeat transition-transform duration-300 group-hover:scale-105" data-alt="Imagem de São João Paulo II" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAbxAbMjww_FHo_8LNlvmNmKX8_OOlzVasy14bNbZTid2FuCUwP6j1reeL5b9VIfDzOEX3qSMrlX2jJVHa8WFF_6XZinxHZob5tr55Pujsck1xoRA6kwSHcqdiqgfpeRcTa-s48L8Bh2KySvVuwwxPwS1aoCVRT4uonLHO6C9gFKGvBEVOJEDmaevicjJXPTciSuKRhrJ0I34D2hwDMQxErSPXpkaIq3uEdxCwWhUvfA1YjcTQP0jUkUT-WMajZicojxfj7oQrtN7M');"></div>
+<div class="p-4">
+<p class="text-base font-semibold text-text-main">São João Paulo II</p>
+<p class="text-sm text-text-secondary">Festa em 22 de Outubro</p>
+</div>
+</div>
+<div class="group flex cursor-pointer flex-col overflow-hidden rounded-xl bg-card shadow-sm">
+<div class="aspect-[3/4] w-full bg-cover bg-center bg-no-repeat transition-transform duration-300 group-hover:scale-105" data-alt="Imagem de Santa Faustina Kowalska" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBYSCcPdTnSfuHPLYCvcwxcRhBf-iDOv7pJd7Mg9ARfxIYxBoJI8hjihYGkmmdYzd32viSKww5YBa6LmspsZO36N6f_Gf8n3efeFEL3cLuCYvNhNSDeOPgD2zeLvD9wMphn2dbsXAdOyoU36NY2b4625EX7BN2Ud4XblFmvLwC6zi_CeU2ZdDhe6_WsJL74ugMQDuMPgCbjaOwjdkoE_tw-Ykicf71IS4eIzdEuHM7Tu353GybJER8a25nHBtKxD97StSE8z7eHaKs');"></div>
+<div class="p-4">
+<p class="text-base font-semibold text-text-main">Santa Faustina Kowalska</p>
+<p class="text-sm text-text-secondary">Festa em 5 de Outubro</p>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>

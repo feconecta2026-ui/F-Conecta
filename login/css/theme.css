@@ -1,0 +1,19 @@
+:root {
+  --app-bg: #D9C7B3;
+  --app-secondary: #B89A7A;
+  --app-highlight: #C8A265;
+  --app-card: #F3ECE4;
+  --app-text-main: #4E3B2E;
+  --app-text-secondary: #6C5A4B;
+  --app-border-soft: rgba(184, 154, 122, 0.22);
+}
+
+html, body {
+  background: var(--app-bg);
+  color: var(--app-text-main);
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  margin: 0;
+}

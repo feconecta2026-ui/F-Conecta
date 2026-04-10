@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fé em Foco - Aplicativo de Orações</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Lora:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "app-bg": "#D9C7B3",
+              "app-secondary": "#B89A7A",
+              "app-highlight": "#C8A265",
+              "app-card": "#F3ECE4",
+              "app-text-main": "#4E3B2E",
+              "app-text-secondary": "#6C5A4B",
+            },
+            fontFamily: {
+              "display": ["Manrope", "sans-serif"],
+              "serif": ["Lora", "serif"],
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+    <link rel="stylesheet" href="../js/sidebar-global.css" />
+    <style>
+      #categoriesContent {
+        overflow-x: hidden;
+      }
+      #panelResizer {
+        position: relative;
+      }
+      #panelResizer::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: -3px;
+        right: -3px;
+      }
+    </style>
+  </head>
+  <body class="font-display bg-app-bg text-app-text-main">
+    <div class="flex h-screen w-full">
+      <aside id="sidebar"></aside>
+
+      <main id="categoriesPanel" class="flex h-full w-[400px] min-w-[260px] max-w-[520px] shrink-0 flex-col border-r border-app-secondary/20 bg-app-bg">
+        <div class="p-4 border-b border-app-secondary/20">
+          <h2 class="text-lg font-bold">Categorias</h2>
+        </div>
+        <div class="flex-1 overflow-y-auto" id="categoriesContent"></div>
+      </main>
+
+      <div id="panelResizer" class="w-1 shrink-0 cursor-col-resize bg-app-secondary/20 hover:bg-app-highlight/60 transition-colors"></div>
+
+      <section class="flex-1 h-full bg-app-card flex flex-col" id="contentArea"></section>
+    </div>
+
+    <script src="oracao.js"></script>
+    <script src="../js/app-config.js"></script>
+    <script src="../js/app-state.js"></script>
+    <script src="../js/app-ui.js"></script>
+    <script>
+      FeUI.protectPage();
+      FeUI.renderSidebar("oracao");
+      if (window.FeState) FeState.applyUserToPage();
+    </script>
+  </body>
+</html>

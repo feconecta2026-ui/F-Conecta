@@ -1,0 +1,12 @@
+/* ÍCONES */
+.material-symbols-outlined {
+  font-size: 20px;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+.fe-nav-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}

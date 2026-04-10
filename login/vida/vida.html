@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FéConecta - Vida dos Santos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link rel="stylesheet" href="Vida dos Santos.css" />
+    <link rel="stylesheet" href="../js/sidebar-global.css" />
+  </head>
+  <body>
+    <div class="container">
+      <aside id="sidebar"></aside>
+
+      <main class="main-content">
+        <div class="content-container">
+          <div class="header">
+            <div class="header-content">
+              <h1 class="page-title">Vida dos Santos</h1>
+              <p class="page-subtitle">Explore biografias, milagres e ensinamentos dos pilares da nossa fé.</p>
+            </div>
+          </div>
+
+          <div class="toolbar">
+            <div class="search-container">
+              <label class="search-label">
+                <div class="search-wrapper">
+                  <div class="search-icon">
+                    <span class="material-symbols-outlined">search</span>
+                  </div>
+                  <input id="saintSearchInput" class="search-input" placeholder="Buscar santo pelo nome..." value="" />
+                </div>
+              </label>
+            </div>
+
+            <div class="filters-container">
+              <button class="filter-button">
+                <span class="material-symbols-outlined">calendar_month</span>
+                <p class="filter-text">Mês da Festividade</p>
+                <span class="material-symbols-outlined">expand_more</span>
+              </button>
+              <button class="filter-button">
+                <span class="material-symbols-outlined">shield</span>
+                <p class="filter-text">Mártires</p>
+                <span class="material-symbols-outlined">expand_more</span>
+              </button>
+              <button class="filter-button">
+                <span class="material-symbols-outlined">school</span>
+                <p class="filter-text">Doutores da Igreja</p>
+                <span class="material-symbols-outlined">expand_more</span>
+              </button>
+              <button class="filter-button">
+                <span class="material-symbols-outlined">group</span>
+                <p class="filter-text">Padroeiros</p>
+                <span class="material-symbols-outlined">expand_more</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="saints-grid" id="saintsGrid"></div>
+        </div>
+      </main>
+    </div>
+
+    <script src="../js/app-config.js"></script>
+    <script src="../js/app-state.js"></script>
+    <script src="../js/app-ui.js"></script>
+    <script>
+      FeUI.protectPage();
+      FeUI.renderSidebar("vida");
+      if (window.FeState) FeState.applyUserToPage();
+    </script>
+    <script src="vida.js"></script>
+  </body>
+</html>

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+
+<html class="light" lang="pt-br"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Música - Aplicativo Católico</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined.fill {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#c8a265",
+                        "background-light": "#d9c7b3",
+                        "background-dark": "#1e1a14",
+                        "card": "#F3ECE4",
+                        "secondary": "#B89A7A",
+                        "text-main": "#4E3B2E",
+                        "text-secondary": "#6C5A4B",
+                    },
+                    fontFamily: {
+                        "display": ["Epilogue", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-text-main">
+<div class="flex min-h-screen">
+<!-- SideNavBar -->
+<aside class="w-64 bg-card dark:bg-[#2c2821] flex flex-col p-4 shrink-0">
+<div class="flex-grow">
+<div class="flex items-center gap-3 mb-8">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="Avatar of user" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCKBce4ghtN60Oeomkv1VxhL536i_M6xh7PSKQNjKxFYVflxhvZ8ThmZq4pVfhXzH2ADLr-tQDI_0WEjJVZN3T_9TYRj6nXLOYgD2DEU3QaV-d0wlwf3qkDcG3yFu4Fq2Oy-TOCDzeMvAhFNbDzSK3SgiWOrbLv2a-e4J9zEacx6N5CUEJKdVdJA_2yx7uY8gJpF7HNnAU3Y34Q2zbUoohHiVpPjKHlhZgFKyLIhilUuEbZxfC7L0YNWW7zQgjJOHUSPo0knGuUXZU");'></div>
+<div class="flex flex-col">
+<h1 class="text-text-main dark:text-card text-base font-medium leading-normal">Usuário</h1>
+<p class="text-text-secondary dark:text-secondary text-sm font-normal leading-normal">usuario@email.com</p>
+</div>
+</div>
+<nav class="flex flex-col gap-2">
+<a class="flex items-center gap-3 px-3 py-2 text-text-secondary dark:text-secondary hover:bg-primary/20 hover:text-text-main dark:hover:text-card rounded-lg transition-colors" href="#">
+<span class="material-symbols-outlined">home</span>
+<p class="text-sm font-medium leading-normal">Início</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-text-secondary dark:text-secondary hover:bg-primary/20 hover:text-text-main dark:hover:text-card rounded-lg transition-colors" href="#">
+<span class="material-symbols-outlined">book</span>
+<p class="text-sm font-medium leading-normal">Orações</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-text-secondary dark:text-secondary hover:bg-primary/20 hover:text-text-main dark:hover:text-card rounded-lg transition-colors" href="#">
+<span class="material-symbols-outlined">groups</span>
+<p class="text-sm font-medium leading-normal">Santos</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg bg-primary/30 dark:bg-primary/40 text-text-main dark:text-card" href="#">
+<span class="material-symbols-outlined fill">music_note</span>
+<p class="text-sm font-medium leading-normal">Música</p>
+</a>
+</nav>
+</div>
+<div class="flex flex-col gap-1">
+<a class="flex items-center gap-3 px-3 py-2 text-text-secondary dark:text-secondary hover:bg-primary/20 hover:text-text-main dark:hover:text-card rounded-lg transition-colors" href="#">
+<span class="material-symbols-outlined">settings</span>
+<p class="text-sm font-medium leading-normal">Configurações</p>
+</a>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="flex-1 flex flex-col overflow-y-auto pb-24"> <!-- Padding bottom for footer player -->
+<div class="p-8">
+<!-- PageHeading -->
+<header class="flex flex-wrap justify-between items-center gap-4 mb-4">
+<h1 class="text-text-main dark:text-card text-4xl font-black leading-tight tracking-[-0.033em]">Música</h1>
+</header>
+<!-- SearchBar -->
+<div class="mb-6">
+<label class="flex flex-col min-w-40 h-12 w-full">
+<div class="flex w-full flex-1 items-stretch rounded-xl h-full">
+<div class="text-text-secondary dark:text-secondary flex bg-card dark:bg-[#2c2821] items-center justify-center pl-4 rounded-l-xl">
+<span class="material-symbols-outlined">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-r-xl text-text-main dark:text-card focus:outline-0 focus:ring-0 border-none bg-card dark:bg-[#2c2821] focus:border-none h-full placeholder:text-text-secondary placeholder:dark:text-secondary px-4 pl-2 text-base font-normal leading-normal" placeholder="Buscar por título, artista ou tema" value=""/>
+</div>
+</label>
+</div>
+<!-- Chips -->
+<div class="flex gap-3 mb-8 overflow-x-auto pb-2">
+<button class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full bg-primary/30 dark:bg-primary/40 text-text-main dark:text-card px-4 hover:bg-primary/50 transition-colors">
+<p class="text-sm font-medium leading-normal">Todos</p>
+</button>
+<button class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full bg-card dark:bg-[#2c2821] text-text-secondary dark:text-secondary px-4 hover:bg-primary/30 dark:hover:bg-primary/40 hover:text-text-main dark:hover:text-card transition-colors">
+<p class="text-sm font-medium leading-normal">Instrumental</p>
+</button>
+<button class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full bg-card dark:bg-[#2c2821] text-text-secondary dark:text-secondary px-4 hover:bg-primary/30 dark:hover:bg-primary/40 hover:text-text-main dark:hover:text-card transition-colors">
+<p class="text-sm font-medium leading-normal">Cânticos Gregorianos</p>
+</button>
+<button class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full bg-card dark:bg-[#2c2821] text-text-secondary dark:text-secondary px-4 hover:bg-primary/30 dark:hover:bg-primary/40 hover:text-text-main dark:hover:text-card transition-colors">
+<p class="text-sm font-medium leading-normal">Adoração</p>
+</button>
+<button class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full bg-card dark:bg-[#2c2821] text-text-secondary dark:text-secondary px-4 hover:bg-primary/30 dark:hover:bg-primary/40 hover:text-text-main dark:hover:text-card transition-colors">
+<p class="text-sm font-medium leading-normal">Contemporânea</p>
+</button>
+</div>
+<!-- Section -->
+<section class="mb-10">
+<h2 class="text-text-main dark:text-card text-[22px] font-bold leading-tight tracking-[-0.015em] mb-4">Playlist da Semana</h2>
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
+<!-- Music Card -->
+<div class="group flex flex-col gap-3 cursor-pointer">
+<div class="relative aspect-square w-full">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-xl w-full h-full" data-alt="Album cover with abstract golden lines on a beige background" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuADw4ZhW7o12Sn-IQqYIhWhJ2tZ6HAloQISmd65AjQmd2TEXjrUWmw-77TlXaxUk2sExejam4Pj-RjXKtPsCru2alqCd-DcgzSLlHdY9UjslABMyThgALBwMCwBNOASpR_Seyi_SV3OGgElz1123616ADuRD4QZ73U0pJJ96zIN60GmGZ09uRlewJr0AN3pqKCvqhM1DG2UEVu8pg5GaTARf1y5J_GzeLnu8aIgUqg3EXa8WnTwmQhIPrB5hIkWQzKdTUIBQTlERHc");'></div>
+<div class="absolute inset-0 bg-black/20 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<button class="w-14 h-14 bg-primary rounded-full flex items-center justify-center text-card shadow-lg transform group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-4xl fill">play_arrow</span>
+</button>
+</div>
+</div>
+<div class="flex flex-col">
+<h3 class="font-bold text-text-main dark:text-card">Hinos de Ação de Graças</h3>
+<p class="text-sm text-text-secondary dark:text-secondary">Vários Artistas</p>
+</div>
+</div>
+<div class="group flex flex-col gap-3 cursor-pointer">
+<div class="relative aspect-square w-full">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-xl w-full h-full" data-alt="Album cover with a simple cross illustration" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDnRTtBSO4Fikko4TEibK4Z_BEjqYbvmzjR-2MlNhK8K7I2lGAAAmxbyXO87QmsMyPeMreLf0fWemDM6WDersiTGkvSWiRODQwSVSz7kKpxK6Y35c2fVFA4TF32utN9rOMwY88bzcLI4nv30XerxiHdyT9JLlodvgz3JuGEaT827TVbnGPazU1XDkadqeNJd7xBu-Nybu61CdZ2zIKew4oCEh6fsHQrTXhG6Y30ferEpbrTYRyYoEdYc-i47M2COXIaDIyhhGhEp10");'></div>
+<div class="absolute inset-0 bg-black/20 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<button class="w-14 h-14 bg-primary rounded-full flex items-center justify-center text-card shadow-lg transform group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-4xl fill">play_arrow</span>
+</button>
+</div>
+</div>
+<div class="flex flex-col">
+<h3 class="font-bold text-text-main dark:text-card">Músicas para Oração</h3>
+<p class="text-sm text-text-secondary dark:text-secondary">Instrumental</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Section -->
+<section class="mb-10">
+<h2 class="text-text-main dark:text-card text-[22px] font-bold leading-tight tracking-[-0.015em] mb-4">Lançamentos</h2>
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
+<!-- Music Card -->
+<div class="group flex flex-col gap-3 cursor-pointer">
+<div class="relative aspect-square w-full">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-xl w-full h-full" data-alt="Album cover with an abstract depiction of a dove" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDPwqOnXtQUBtcWLThYNBlF6gh4yU5z08BjdiAX7HjcC0oxbLJhBe_iHqjWmIC0A7udSlFJs-fyBoY1eFGrH-wkTAXGfKC_TKgpMv9zjnRdlFPblUUIJq6x-Xg3HyAM_sNy4yCoGiL5hqHtIuHdepx7BAzTIkMRtntzPssSdotWyXrSpAF9ZfXNgBFQ17eOkjzVs8oK1skaUzg2i45NtwUsSULODtrXYyErbPGEghYKUIUn0-K8dmJkTSvNeVLnt30JiwQkxumrWe8");'></div>
+<div class="absolute inset-0 bg-black/20 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<button class="w-14 h-14 bg-primary rounded-full flex items-center justify-center text-card shadow-lg transform group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-4xl fill">play_arrow</span>
+</button>
+</div>
+</div>
+<div class="flex flex-col">
+<h3 class="font-bold text-text-main dark:text-card">Caminho de Paz</h3>
+<p class="text-sm text-text-secondary dark:text-secondary">Artista Novo</p>
+</div>
+</div>
+<div class="group flex flex-col gap-3 cursor-pointer">
+<div class="relative aspect-square w-full">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-xl w-full h-full" data-alt="Album cover showing organ pipes" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA3c7LfKoUaCh_26CT_gF4msqshQW4325ALz4OEkTXMYMa3SDGjyA1Zjyos4dWeduRGmp6uOB_UqJqDHDz3Hh40c8AVXd6bIpT5yD4OnG0ZJ7vuF_zxoYc7RdQVMANrFJv9tlknpblzK6MW1x881tSmbXBHajGOixNUwAj_fOooeSIbZE2rRV_mn2VfeZoK4ME7ch4qD93NGCwg6SiWAtaivfLwW4XlS2Ugti7954xUyBew1UqJe1ZQ3eLpG7RLkEXubaHhRo0zQCU");'></div>
+<div class="absolute inset-0 bg-black/20 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<button class="w-14 h-14 bg-primary rounded-full flex items-center justify-center text-card shadow-lg transform group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-4xl fill">play_arrow</span>
+</button>
+</div>
+</div>
+<div class="flex flex-col">
+<h3 class="font-bold text-text-main dark:text-card">Cantos Sacros</h3>
+<p class="text-sm text-text-secondary dark:text-secondary">Coro da Catedral</p>
+</div>
+</div>
+<div class="group flex flex-col gap-3 cursor-pointer">
+<div class="relative aspect-square w-full">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-xl w-full h-full" data-alt="Album cover with an abstract sunrise graphic" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCbQEwNLblEt4DjQ7Ys7OZaX8slFb4brne2XgBKR_h7w-fHYBDwpPCz3MSPaHjsVWW3S6UHrEBMk3IIF0LXFQj3finYaLcomimkupSPPfs7jJTFn232jMK_Zg0Bg85ifdCdHgDOiv0m3WDDFvGxSYcT0wcUyW8ixwCHrOF1843IpJx4U1GeZ38ik7K77pl1DxSFx3vnl87aqp-Q_w_-QDeYE3aqgfGu3rC2MT8HH3j3qML-jkuNBvOpsBjY3ZCUKka13E8yGAgsZJk");'></div>
+<div class="absolute inset-0 bg-black/20 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<button class="w-14 h-14 bg-primary rounded-full flex items-center justify-center text-card shadow-lg transform group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-4xl fill">play_arrow</span>
+</button>
+</div>
+</div>
+<div class="flex flex-col">
+<h3 class="font-bold text-text-main dark:text-card">Nova Manhã</h3>
+<p class="text-sm text-text-secondary dark:text-secondary">Ministério Adorai</p>
+</div>
+</div>
+</div>
+</section>
+</div>
+</main>
+</div>
+<!-- Audio Player Footer -->
+<footer class="fixed bottom-0 left-0 right-0 h-22 bg-card/90 dark:bg-[#2c2821]/90 backdrop-blur-sm border-t border-secondary/20 dark:border-primary/20 flex items-center px-6 py-2 z-50">
+<div class="flex items-center gap-4 w-1/4">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-md size-14" data-alt="Album art for the currently playing song" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDShNXhNDXi6fVBgesAumCrEnDa6lQ3GtJSsaLGWrGeJzxeZW0csOwS62gXnUlZNo-X_L7xx8PjbvxLpg-rNrGyRLLnzzOi9RRoKVnKfQ_nFvV3i8ThhPzebM671ZEuNcUJ2y0nC49OLuAho1xoEV9DEZEODKS-1QFXfxt1i3r9uLXJVp4NRqTWSjoEmKv5YBJJi2UVVf-kicZk572JiIiiUgeiJOughs6O9ww9w0CsH2zvRGjyRLN7DE5vvqnmV_vCnehx0fuzuEs");'></div>
+<div>
+<p class="font-bold text-text-main dark:text-card">Hino de Ação de Graças</p>
+<p class="text-sm text-text-secondary dark:text-secondary">Vários Artistas</p>
+</div>
+</div>
+<div class="flex flex-col items-center justify-center gap-2 w-1/2">
+<div class="flex items-center gap-6">
+<button class="text-text-secondary dark:text-secondary hover:text-text-main dark:hover:text-card transition-colors"><span class="material-symbols-outlined text-2xl">skip_previous</span></button>
+<button class="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-card hover:bg-[#b58f55] transition-colors">
+<span class="material-symbols-outlined text-3xl fill">pause</span>
+</button>
+<button class="text-text-secondary dark:text-secondary hover:text-text-main dark:hover:text-card transition-colors"><span class="material-symbols-outlined text-2xl">skip_next</span></button>
+</div>
+<div class="flex items-center gap-2 w-full max-w-lg">
+<span class="text-xs text-text-secondary dark:text-secondary">1:32</span>
+<div class="w-full bg-secondary/30 rounded-full h-1.5 dark:bg-secondary/50">
+<div class="bg-primary h-1.5 rounded-full" style="width: 45%"></div>
+</div>
+<span class="text-xs text-text-secondary dark:text-secondary">3:45</span>
+</div>
+</div>
+<div class="flex items-center justify-end gap-3 w-1/4">
+<span class="material-symbols-outlined text-text-secondary dark:text-secondary">volume_up</span>
+<div class="w-24 bg-secondary/30 rounded-full h-1.5 dark:bg-secondary/50">
+<div class="bg-primary h-1.5 rounded-full" style="width: 70%"></div>
+</div>
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FéConecta - Início</title>
+
+    <!-- Importação da fonte Manrope do Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Importação dos ícones Material Symbols -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+
+    <!-- Link para o arquivo CSS externo -->
+    <link rel="stylesheet" href="inicio.css" />
+
+    <!-- Sistema de verificação de login -->
+    <script>
+      // Verificar se usuário está logado
+      document.addEventListener("DOMContentLoaded", function () {
+        const user = localStorage.getItem("loggedUser");
+        if (!user) {
+          window.location.href = "../FéConecta.html";
+          return;
+        }
+
+        // Mostrar nome do usuário se disponível
+        const userData = JSON.parse(user);
+        if (userData && userData.nome) {
+          const greetingElement = document.querySelector(".greeting h1");
+          if (greetingElement) {
+            greetingElement.textContent = `Bem-vindo, ${
+              userData.nome.split(" ")[0]
+            }!`;
+          }
+        }
+
+        // Atualizar data atual
+        const options = {
+          weekday: "long",
+          year: "numeric",
+          month: "long",
+          day: "numeric",
+        };
+        const today = new Date().toLocaleDateString("pt-BR", options);
+        const dateElement = document.querySelector(".date");
+        if (dateElement) {
+          dateElement.textContent = today;
+        }
+      });
+
+      // Função de logout
+      function logout() {
+        localStorage.removeItem("loggedUser");
+        window.location.href = "../FéConecta.html";
+      }
+    </script>
+      <link rel="stylesheet" href="../js/sidebar-global.css" />
+  </head>
+
+  <body>
+    <!-- Container principal que divide a tela em sidebar e conteúdo -->
+    <div class="container">
+      <!-- Sidebar com navegação -->
+      <aside id="sidebar"></aside>
+
+      <!-- Conteúdo principal -->
+      <main class="main-content">
+        <div class="content-container">
+          <!-- Cabeçalho com saudação e data -->
+          <div class="header">
+            <div class="greeting">
+              <h1>Bem-vindo de volta!</h1>
+              <p class="date">Carregando data...</p>
+            </div>
+          </div>
+
+          <!-- Grid de conteúdo principal -->
+          <div class="content-grid">
+            <!-- Coluna principal (2/3 da largura em telas grandes) -->
+            <div class="main-cards">
+              <!-- Card da oração do dia -->
+              <div class="prayer-card">
+                <div
+                  class="prayer-image"
+                  style="
+                    background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAW7DzIOchLyq-doVsqTVJXqme5W52ecivuOVgE3VrL4ewA1Yv7PwICEB36o8ktWvrYO97NV16S-CbKKwa1cU46ZPnW8d_Y0SuFigK7Vbn8_ZXPAepiULI--Zh06IfBxgm37Yohh_3pmwJp-Q29AhVRpeEhnx6vtFJ2l3M0--4Ib7N2gi0LwY6tL2U9omOpiJOZEtAuf2A77xcCo_o10msAHAtXwPnn0rub9mpWIgByu18X7PnMtOdOBbDtkB-c9-YOVqDdrbkVWjs');
+                  "
+                ></div>
+                <div class="prayer-content">
+                  <p class="prayer-title">Oração do Dia</p>
+                  <p class="prayer-text">
+                    Vinde, Espírito Santo, enchei os corações dos vossos fiéis e
+                    acendei neles o fogo do vosso amor...
+                  </p>
+                  <div class="prayer-button">
+                    <a href="../oracao/oracao.html" class="btn btn-primary">
+                      <span class="btn-text">Ler Oração Completa</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card do santo do dia -->
+              <div class="saint-card">
+                <div class="saint-content">
+                  <div class="saint-info">
+                    <p class="saint-title">Santo do Dia: São João I</p>
+                    <p class="saint-description">
+                      Papa e mártir que defendeu a fé cristã contra a heresia
+                      ariana no século VI.
+                    </p>
+                  </div>
+                  <a href="../vida/vida.html" class="saint-button">
+                    <span class="btn-text">Ver História Completa</span>
+                  </a>
+                </div>
+                <div
+                  class="saint-image"
+                  style="
+                    background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC3NLzeyqe5H0wrlL-BC_F1MURMjpqhH27lezjU9Y1BEKFdaI4PLdUqIgNeidwJDtIZP8R4c3juCuZErM1j0gNTCTGNyVvsNaqcHs9jtG1tBofP3BswkGTaw-LTZL0JGe4WOwBXr7y_wqEWiKrLX40BI_BUtfwgwegn0YRi49mVwwrB_PRSYy67czFposFDaSt11AjzSFcxvrie8WIHzqQ1vf0fF4Q9tHoghUcQ2OryqhZHVihLWDzkqX3lEcYIsWlbteBKGqe4DgQ');
+                  "
+                ></div>
+              </div>
+            </div>
+
+            <!-- Coluna lateral (1/3 da largura em telas grandes) -->
+            <div class="side-cards">
+              <!-- Card do terço -->
+              <div class="rosary-card">
+                <div>
+                  <h3 class="rosary-title">Mistério do Terço do Dia</h3>
+                  <p class="rosary-mystery">MISTÉRIOS GOZOSOS</p>
+                  <p class="rosary-schedule">(Segundas e Sábados)</p>
+                </div>
+                <a href="../terco/terco.html" class="rosary-button">
+                  <span class="btn-text">Rezar o Terço</span>
+                </a>
+              </div>
+
+              <!-- Card de música -->
+              <div
+                class="music-card"
+                style="
+                  margin-top: 20px;
+                  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                  color: white;
+                  padding: 20px;
+                  border-radius: 12px;
+                "
+              >
+                <div>
+                  <h3 class="music-title" style="margin: 0 0 10px 0">
+                    Música Inspiradora
+                  </h3>
+                  <p
+                    class="music-description"
+                    style="margin: 0 0 15px 0; opacity: 0.9"
+                  >
+                    Ouça músicas para elevar sua fé
+                  </p>
+                </div>
+                <a
+                  href="../musica/musica.html"
+                  class="music-button"
+                  style="
+                    display: inline-block;
+                    background: rgba(255, 255, 255, 0.2);
+                    color: white;
+                    padding: 10px 20px;
+                    border-radius: 25px;
+                    text-decoration: none;
+                    font-weight: 500;
+                    border: 1px solid rgba(255, 255, 255, 0.3);
+                  "
+                >
+                  <span class="btn-text">Ouvir Músicas</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Seção de acesso rápido -->
+          <div class="quick-access">
+            <h2 class="quick-access-title">Acesso Rápido</h2>
+            <div class="quick-access-grid">
+              <!-- Card de orações -->
+              <a class="quick-card" href="../oracao/oracao.html">
+                <span class="material-symbols-outlined quick-icon"
+                  >menu_book</span
+                >
+                <div class="quick-info">
+                  <p class="quick-title">Explorar Orações</p>
+                  <p class="quick-description">Navegue por todas as orações.</p>
+                </div>
+              </a>
+
+              <!-- Card de santos -->
+              <a class="quick-card" href="../vida/vida.html">
+                <span class="material-symbols-outlined quick-icon">groups</span>
+                <div class="quick-info">
+                  <p class="quick-title">Conhecer os Santos</p>
+                  <p class="quick-description">Descubra a vida dos santos.</p>
+                </div>
+              </a>
+
+              <!-- Card do terço -->
+              <a class="quick-card" href="../terco/terco.html">
+                <span class="material-symbols-outlined quick-icon"
+                  >health_cross</span
+                >
+                <div class="quick-info">
+                  <p class="quick-title">Rezar o Terço</p>
+                  <p class="quick-description">Inicie sua oração do terço.</p>
+                </div>
+              </a>
+
+              <!-- Card de devoções -->
+              <a class="quick-card" href="../devocional/devocional.html">
+                <span class="material-symbols-outlined quick-icon">church</span>
+                <div class="quick-info">
+                  <p class="quick-title">Devoções Diárias</p>
+                  <p class="quick-description">Encontre paz e reflexão.</p>
+                </div>
+              </a>
+
+              <!-- Card de músicas -->
+              <a class="quick-card" href="../musica/musica.html">
+                <span class="material-symbols-outlined quick-icon"
+                  >music_note</span
+                >
+                <div class="quick-info">
+                  <p class="quick-title">Músicas Sacras</p>
+                  <p class="quick-description">Ouça músicas inspiradoras.</p>
+                </div>
+              </a>
+
+              <!-- Card de orações favoritas -->
+              <a
+                class="quick-card"
+                href="../Minhas Orações Favoritas/favoritas.html"
+              >
+                <span class="material-symbols-outlined quick-icon"
+                  >favorite</span
+                >
+                <div class="quick-info">
+                  <p class="quick-title">Minhas Orações</p>
+                  <p class="quick-description">Suas orações favoritas.</p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  
+    <script src="../js/app-config.js"></script>
+    <script src="../js/app-state.js"></script>
+    <script src="../js/app-ui.js"></script>
+    <script>
+      FeUI.protectPage();
+      FeUI.renderSidebar("inicio");
+    </script>
+  </body>
+</html>

@@ -1,0 +1,12 @@
+<!-- Adicione no <head>, depois do CSS da página -->
+<link rel="stylesheet" href="../css/theme.css" />
+
+<!-- No final do <body> -->
+<script src="../js/app-config.js"></script>
+<script src="../js/app-state.js"></script>
+<script src="../js/app-ui.js"></script>
+<script>
+  FeUI.protectPage();
+  FeUI.renderSidebar("configuracoes");
+  FeState.applyUserToPage();
+</script>

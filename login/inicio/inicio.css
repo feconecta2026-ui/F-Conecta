@@ -1,0 +1,544 @@
+/* ===== VARIÁVEIS DE CORES ===== */
+/* Define as cores principais usadas no design */
+:root {
+  --background: #d9c7b3; /* Cor de fundo principal */
+  --secondary: #b89a7a; /* Cor secundária */
+  --accent: #c8a265; /* Cor de destaque/realce */
+  --card: #f3ece4; /* Cor de fundo dos cards */
+  --text-main: #4e3b2e; /* Cor do texto principal */
+  --text-secondary: #6c5a4b; /* Cor do texto secundário */
+}
+
+/* ===== RESET E CONFIGURAÇÕES GLOBAIS ===== */
+* {
+  box-sizing: border-box; /* Inclui padding e border no cálculo de largura/altura */
+  margin: 0; /* Remove margens padrão */
+  padding: 0; /* Remove paddings padrão */
+}
+
+/* ===== ESTILOS DO CORPO ===== */
+body {
+  font-family: "Manrope", sans-serif; /* Define a fonte principal */
+  background-color: var(--background); /* Aplica a cor de fundo */
+  color: var(--text-main); /* Aplica a cor do texto principal */
+  height: 100vh; /* Ocupa 100% da altura da viewport */
+  overflow: hidden; /* Remove barras de rolagem */
+}
+
+/* ===== LAYOUT PRINCIPAL ===== */
+.container {
+  display: flex; /* Cria um layout flexível */
+  height: 100vh; /* Ocupa 100% da altura da viewport */
+  width: 100%; /* Ocupa 100% da largura */
+}
+
+/* ===== SIDEBAR ===== */
+.sidebar {
+  width: 16rem; /* Largura fixa da sidebar */
+  display: flex; /* Layout flexível */
+  flex-direction: column; /* Organiza os itens verticalmente */
+  background-color: rgba(
+    243,
+    236,
+    228,
+    0.6
+  ); /* Cor de fundo com transparência */
+  padding: 1rem; /* Espaçamento interno */
+  border-right: 1px solid rgba(108, 90, 75, 0.2); /* Borda lateral direita */
+}
+
+/* Container do logo */
+.logo-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem; /* Espaçamento entre elementos */
+}
+
+/* Área do logo */
+.logo {
+  display: flex;
+  gap: 0.75rem; /* Espaçamento entre imagem e texto */
+  align-items: center; /* Alinha verticalmente ao centro */
+}
+
+/* Imagem do logo */
+.logo-image {
+  background-size: cover; /* Ajusta a imagem para cobrir o container */
+  background-repeat: no-repeat; /* Evita repetição da imagem */
+  background-position: center; /* Centraliza a imagem */
+  aspect-ratio: 1/1; /* Mantém proporção quadrada */
+  border-radius: 9999px; /* Cria um círculo perfeito */
+  width: 2.5rem; /* Largura fixa */
+  height: 2.5rem; /* Altura fixa */
+}
+
+/* Texto do logo */
+.logo-text h1 {
+  color: var(--text-main); /* Cor do texto principal */
+  font-size: 1rem; /* Tamanho da fonte */
+  font-weight: 700; /* Peso da fonte (negrito) */
+  line-height: 1.5; /* Altura da linha */
+}
+
+.logo-text p {
+  color: var(--text-secondary); /* Cor do texto secundário */
+  font-size: 0.875rem; /* Tamanho da fonte menor */
+  font-weight: 400; /* Peso da fonte normal */
+  line-height: 1.5; /* Altura da linha */
+}
+
+/* Navegação */
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem; /* Espaçamento entre itens de navegação */
+  margin-top: 1rem; /* Espaçamento superior */
+}
+
+/* Itens de navegação */
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem; /* Espaçamento entre ícone e texto */
+  padding: 0.5rem 0.75rem; /* Espaçamento interno */
+  border-radius: 0.5rem; /* Cantos arredondados */
+  text-decoration: none; /* Remove sublinhado dos links */
+}
+
+/* Item de navegação ativo */
+.nav-item.active {
+  background-color: rgba(200, 162, 101, 0.2); /* Fundo com cor de destaque */
+}
+
+/* Efeito hover nos itens de navegação */
+.nav-item:hover:not(.active) {
+  background-color: rgba(0, 0, 0, 0.05); /* Fundo sutil ao passar o mouse */
+}
+
+/* Ícones de navegação */
+.nav-icon {
+  color: var(--text-main); /* Cor do ícone */
+  font-size: 1.5rem; /* Tamanho do ícone */
+}
+
+/* Ícones de itens não ativos */
+.nav-item:not(.active) .nav-icon {
+  color: var(--text-secondary); /* Cor secundária para ícones inativos */
+}
+
+/* Texto dos itens de navegação */
+.nav-text {
+  color: var(--text-main); /* Cor do texto */
+  font-size: 0.875rem; /* Tamanho da fonte */
+  font-weight: 500; /* Peso da fonte (médio) */
+  line-height: 1.5; /* Altura da linha */
+}
+
+/* Rodapé da sidebar */
+.sidebar-footer {
+  margin-top: auto; /* Empurra para o final da sidebar */
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem; /* Pequeno espaçamento entre itens */
+}
+
+/* ===== CONTEÚDO PRINCIPAL ===== */
+.main-content {
+  flex: 1; /* Ocupa o espaço restante */
+  overflow-y: auto; /* Permite rolagem vertical se necessário */
+  padding: 2rem; /* Espaçamento interno */
+}
+
+/* Container do conteúdo */
+.content-container {
+  max-width: 80rem; /* Largura máxima do conteúdo */
+  margin: 0 auto; /* Centraliza horizontalmente */
+}
+
+/* Cabeçalho com saudação e data */
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.greeting {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  min-width: 18rem;
+}
+
+.greeting h1 {
+  color: var(--text-main);
+  font-size: 2.25rem;
+  font-weight: 900;
+  line-height: 1.25;
+  letter-spacing: -0.033em;
+}
+
+.date {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+/* ===== GRID DE CONTEÚDO ===== */
+.content-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+/* Layout para telas maiores */
+@media (min-width: 1024px) {
+  .content-grid {
+    grid-template-columns: 2fr 1fr; /* Duas colunas com proporção 2:1 */
+  }
+}
+
+/* ===== CARDS PRINCIPAIS ===== */
+.main-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Card de oração do dia */
+.prayer-card {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  border-radius: 0.75rem;
+  background-color: var(--card);
+  overflow: hidden;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+/* Layout responsivo para card de oração */
+@media (min-width: 1280px) {
+  .prayer-card {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+
+/* Imagem do card de oração */
+.prayer-image {
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  aspect-ratio: 16/9;
+}
+
+/* Layout responsivo para imagem de oração */
+@media (min-width: 1280px) {
+  .prayer-image {
+    width: 33.333333%;
+    aspect-ratio: 1/1;
+  }
+}
+
+/* Conteúdo do card de oração */
+.prayer-content {
+  display: flex;
+  width: 100%;
+  min-width: 18rem;
+  flex-grow: 1;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1.5rem;
+}
+
+.prayer-title {
+  color: var(--text-main);
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -0.015em;
+}
+
+.prayer-text {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.prayer-button {
+  margin-top: 1rem;
+}
+
+/* Card do santo do dia */
+.saint-card {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-between;
+  gap: 1rem;
+  border-radius: 0.75rem;
+  background-color: var(--card);
+  padding: 1.5rem;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+/* Layout responsivo para card do santo */
+@media (min-width: 640px) {
+  .saint-card {
+    flex-direction: row;
+  }
+}
+
+/* Conteúdo do card do santo */
+.saint-content {
+  display: flex;
+  flex: 2 2 0px;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.saint-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.saint-title {
+  color: var(--text-main);
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.saint-description {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.saint-button {
+  display: flex;
+  min-width: 5.25rem;
+  max-width: 30rem;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  height: 2.5rem;
+  padding: 0 1rem;
+  background-color: rgba(200, 162, 101, 0.2);
+  color: var(--text-main);
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.5;
+  width: fit-content;
+  border: none;
+}
+
+.saint-button:hover {
+  background-color: rgba(200, 162, 101, 0.3);
+}
+
+/* Imagem do santo */
+.saint-image {
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  aspect-ratio: 1/1;
+  border-radius: 0.5rem;
+  flex: 1;
+}
+
+/* Layout responsivo para imagem do santo */
+@media (min-width: 640px) {
+  .saint-image {
+    width: 33.333333%;
+  }
+}
+
+/* ===== CARDS LATERAIS ===== */
+.side-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Card do terço */
+.rosary-card {
+  background-color: var(--card);
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.rosary-title {
+  color: var(--text-main);
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.rosary-mystery {
+  color: var(--secondary);
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-top: 0.5rem;
+}
+
+.rosary-schedule {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  font-weight: 400;
+  margin-top: 0.25rem;
+}
+
+.rosary-button {
+  display: flex;
+  width: 100%;
+  min-width: 5.25rem;
+  max-width: 30rem;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  height: 2.5rem;
+  padding: 0 1rem;
+  background-color: var(--accent);
+  color: var(--card);
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.5;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  border: none;
+  margin-top: 1.5rem;
+}
+
+.rosary-button:hover {
+  background-color: rgba(200, 162, 101, 0.9);
+}
+
+/* ===== ACESSO RÁPIDO ===== */
+.quick-access {
+  margin-top: 2rem;
+}
+
+.quick-access-title {
+  color: var(--text-main);
+  font-size: 1.375rem;
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -0.015em;
+  margin-bottom: 1rem;
+}
+
+.quick-access-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+/* Layout responsivo para grid de acesso rápido */
+@media (min-width: 640px) {
+  .quick-access-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .quick-access-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Cards de acesso rápido */
+.quick-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1.5rem;
+  background-color: var(--card);
+  border-radius: 0.75rem;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  text-decoration: none;
+  transition: box-shadow 0.2s;
+}
+
+.quick-card:hover {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.quick-icon {
+  color: var(--secondary);
+  font-size: 2.25rem;
+}
+
+.quick-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.quick-title {
+  color: var(--text-main);
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.quick-description {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+/* ===== BOTÕES ===== */
+.btn {
+  display: flex;
+  min-width: 5.25rem;
+  max-width: 30rem;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  height: 2.5rem;
+  padding: 0 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.5;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  border: none;
+}
+
+.btn-primary {
+  background-color: var(--accent);
+  color: var(--card);
+}
+
+.btn-primary:hover {
+  background-color: rgba(200, 162, 101, 0.9);
+}
+
+.btn-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

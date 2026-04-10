@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html class="light" lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Música - FéConecta</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/theme.css" />
+  <link rel="stylesheet" href="../js/sidebar-global.css" />
+  <link rel="stylesheet" href="Musica.css" />
+</head>
+<body class="bg-background-light font-display text-text-main">
+  <div class="flex min-h-screen">
+    <aside id="sidebar"></aside>
+
+    <main class="flex-1 flex flex-col overflow-y-auto pb-24">
+      <div class="p-8">
+        <header class="flex flex-wrap justify-between items-center gap-4 mb-4">
+          <h1 class="text-text-main text-4xl font-black leading-tight tracking-[-0.033em]">Música</h1>
+        </header>
+
+        <div class="mb-6">
+          <label class="flex flex-col min-w-40 h-12 w-full">
+            <div class="flex w-full flex-1 items-stretch rounded-xl h-full">
+              <div class="text-text-secondary flex bg-card items-center justify-center pl-4 rounded-l-xl">
+                <span class="material-symbols-outlined">search</span>
+              </div>
+              <input id="searchInput" class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-r-xl text-text-main focus:outline-0 focus:ring-0 border-none bg-card h-full placeholder:text-text-secondary px-4 pl-2 text-base font-normal leading-normal" placeholder="Buscar por título, artista ou tema" value="" />
+            </div>
+          </label>
+        </div>
+
+        <div class="flex gap-3 mb-8 overflow-x-auto pb-2" id="filterChips">
+          <button class="filter-chip active flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full bg-primary/30 text-text-main px-4 hover:bg-primary/50 transition-colors" data-filter="all"><p class="text-sm font-medium leading-normal">Todos</p></button>
+          <button class="filter-chip flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full bg-card text-text-secondary px-4 hover:bg-primary/30 hover:text-text-main transition-colors" data-filter="instrumental"><p class="text-sm font-medium leading-normal">Instrumental</p></button>
+          <button class="filter-chip flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full bg-card text-text-secondary px-4 hover:bg-primary/30 hover:text-text-main transition-colors" data-filter="gregorian"><p class="text-sm font-medium leading-normal">Cânticos Gregorianos</p></button>
+          <button class="filter-chip flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full bg-card text-text-secondary px-4 hover:bg-primary/30 hover:text-text-main transition-colors" data-filter="worship"><p class="text-sm font-medium leading-normal">Adoração</p></button>
+          <button class="filter-chip flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full bg-card text-text-secondary px-4 hover:bg-primary/30 hover:text-text-main transition-colors" data-filter="contemporary"><p class="text-sm font-medium leading-normal">Contemporânea</p></button>
+        </div>
+
+        <section class="mb-10">
+          <h2 class="text-text-main text-[22px] font-bold leading-tight tracking-[-0.015em] mb-4">Playlist da Semana</h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6" id="weeklyPlaylist">
+            <div class="music-card group flex flex-col gap-3 cursor-pointer" data-category="worship" data-title="Hinos de Ação de Graças" data-artist="Vários Artistas">
+              <div class="relative aspect-square w-full">
+                <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-xl w-full h-full" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuADw4ZhW7o12Sn-IQqYIhWhJ2tZ6HAloQISmd65AjQmd2TEXjrUWmw-77TlXaxUk2sExejam4Pj-RjXKtPsCru2alqCd-DcgzSLlHdY9UjslABMyThgALBwMCwBNOASpR_Seyi_SV3OGgElz1123616ADuRD4QZ73U0pJJ96zIN60GmGZ09uRlewJr0AN3pqKCvqhM1DG2UEVu8pg5GaTARf1y5J_GzeLnu8aIgUqg3EXa8WnTwmQhIPrB5hIkWQzKdTUIBQTlERHc');"></div>
+                <div class="absolute inset-0 bg-black/20 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                  <button class="play-button w-14 h-14 bg-primary rounded-full flex items-center justify-center text-card shadow-lg transform group-hover:scale-105 transition-transform">
+                    <span class="material-symbols-outlined text-4xl fill">play_arrow</span>
+                  </button>
+                </div>
+              </div>
+              <div class="flex flex-col">
+                <h3 class="font-bold text-text-main">Hinos de Ação de Graças</h3>
+                <p class="text-sm text-text-secondary">Vários Artistas</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <script src="../js/app-config.js"></script>
+  <script src="../js/app-state.js"></script>
+  <script src="../js/app-ui.js"></script>
+  <script>
+    FeUI.protectPage();
+    FeUI.renderSidebar("musica");
+    FeState.applyUserToPage();
+  </script>
+  <script src="musica.js"></script>
+</body>
+</html>

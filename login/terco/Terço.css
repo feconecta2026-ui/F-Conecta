@@ -1,0 +1,433 @@
+/* ===== VARIÁVEIS DE CORES ===== */
+:root {
+  --background: #d9c7b3;
+  --secondary: #b89a7a;
+  --highlight: #c8a265;
+  --card: #f3ece4;
+  --text-main: #4e3b2e;
+  --text-secondary: #6c5a4b;
+}
+
+/* ===== RESET E CONFIGURAÇÕES GLOBAIS ===== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ===== ESTILOS DO CORPO ===== */
+body {
+  font-family: "Manrope", sans-serif;
+  background-color: var(--background);
+  color: var(--text-main);
+  min-height: 100vh;
+}
+
+/* Configuração dos ícones Material Symbols */
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+  font-size: 1.5rem;
+}
+
+.material-symbols-outlined.filled-icon {
+  font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 24;
+}
+
+/* ===== LAYOUT PRINCIPAL ===== */
+.container {
+  position: relative;
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.app-wrapper {
+  display: flex;
+  height: 100%;
+  min-height: 100vh;
+}
+
+/* ===== SIDEBAR ===== */
+.sidebar {
+  width: 16rem;
+  display: flex;
+  flex-shrink: 0;
+  flex-direction: column;
+  background-color: rgba(243, 236, 228, 0.7);
+  border-right: 1px solid rgba(78, 59, 46, 0.1);
+  padding: 1rem;
+}
+
+.sidebar-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  flex: 1;
+}
+
+/* Cabeçalho do sidebar */
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.5rem;
+}
+
+.user-avatar {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  aspect-ratio: 1/1;
+  border-radius: 9999px;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.app-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.app-name {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.app-welcome {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+/* Navegação principal */
+.main-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  color: var(--text-secondary);
+  transition: all 0.2s ease;
+}
+
+.nav-item:hover {
+  background-color: rgba(217, 199, 179, 0.8);
+  color: var(--text-main);
+}
+
+.nav-item.active {
+  background-color: rgba(200, 162, 101, 0.2);
+  color: var(--text-main);
+}
+
+.nav-item.active .material-symbols-outlined {
+  color: var(--highlight);
+}
+
+.nav-text {
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.nav-item.active .nav-text {
+  font-weight: 700;
+}
+
+/* Rodapé do sidebar */
+.sidebar-footer {
+  margin-top: auto;
+}
+
+.action-button {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 0.5rem;
+  background-color: rgba(184, 154, 122, 0.1);
+  padding: 0.5rem 0;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--secondary);
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.action-button:hover {
+  background-color: rgba(184, 154, 122, 0.2);
+}
+
+/* ===== CONTEÚDO PRINCIPAL ===== */
+.main-content {
+  flex: 1;
+  padding: 2rem;
+  overflow-y: auto;
+}
+
+.content-wrapper {
+  max-width: 56rem;
+  margin: 0 auto;
+}
+
+/* Cabeçalho do conteúdo */
+.content-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.header-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.page-title {
+  font-size: 1.875rem;
+  font-weight: 900;
+  color: var(--text-main);
+  letter-spacing: -0.025em;
+}
+
+.page-subtitle {
+  font-size: 1rem;
+  color: var(--text-secondary);
+}
+
+/* Seção de progresso */
+.progress-section {
+  margin-bottom: 1.5rem;
+}
+
+.progress-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.progress-label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-main);
+}
+
+.progress-percentage {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-main);
+}
+
+.progress-bar {
+  width: 100%;
+  border-radius: 9999px;
+  background-color: rgba(184, 154, 122, 0.3);
+  height: 0.5rem;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  border-radius: 9999px;
+  background-color: var(--highlight);
+  transition: width 0.3s ease;
+}
+
+/* Card do mistério */
+.mystery-card {
+  padding: 1rem;
+  background-color: var(--card);
+  border-radius: 0.75rem;
+  border: 1px solid rgba(78, 59, 46, 0.1);
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  margin-bottom: 1.5rem;
+}
+
+.mystery-content {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  gap: 1.5rem;
+}
+
+@media (min-width: 1024px) {
+  .mystery-content {
+    flex-direction: row;
+  }
+}
+
+.mystery-image-container {
+  width: 100%;
+  flex-shrink: 0;
+}
+
+@media (min-width: 1024px) {
+  .mystery-image-container {
+    width: 33.333333%;
+  }
+}
+
+.mystery-image {
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  aspect-ratio: 1/1;
+  border-radius: 0.5rem;
+}
+
+@media (min-width: 1024px) {
+  .mystery-image {
+    aspect-ratio: 3/4;
+  }
+}
+
+.mystery-text {
+  display: flex;
+  width: 100%;
+  flex-grow: 1;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.mystery-number {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--highlight);
+}
+
+.prayer-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-main);
+  letter-spacing: -0.025em;
+}
+
+.prayer-text {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: var(--text-secondary);
+}
+
+/* Contador de dezenas */
+.decade-counter {
+  margin-bottom: 1.5rem;
+}
+
+.counter-label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-main);
+  margin-bottom: 0.75rem;
+}
+
+.counter-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.counter-button {
+  display: flex;
+  height: 2.5rem;
+  flex-shrink: 0;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 9999px;
+  padding: 0 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  border: none;
+  transition: all 0.2s ease;
+}
+
+.counter-button:not(.active) {
+  background-color: var(--card);
+  border: 1px solid rgba(78, 59, 46, 0.1);
+  color: var(--text-secondary);
+}
+
+.counter-button:not(.active):hover {
+  background-color: rgba(184, 154, 122, 0.1);
+}
+
+.counter-button.active.prayer {
+  background-color: var(--highlight);
+  color: white;
+}
+
+.counter-button.active.prayer:hover {
+  background-color: rgba(200, 162, 101, 0.9);
+}
+
+.counter-button.active.ave-maria {
+  background-color: var(--secondary);
+  color: white;
+}
+
+.counter-button.active.ave-maria:hover {
+  background-color: rgba(184, 154, 122, 0.9);
+}
+
+/* Controles de navegação */
+.navigation-controls {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.nav-button {
+  display: flex;
+  height: 2.75rem;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  white-space: nowrap;
+  border-radius: 0.5rem;
+  padding: 0 1.5rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+}
+
+.nav-button.back {
+  border: 1px solid var(--secondary);
+  background-color: var(--card);
+  color: var(--secondary);
+}
+
+.nav-button.back:hover {
+  background-color: rgba(184, 154, 122, 0.1);
+}
+
+.nav-button.next {
+  background-color: var(--secondary);
+  color: white;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+.nav-button.next:hover {
+  background-color: rgba(184, 154, 122, 0.9);
+}

@@ -1,0 +1,198 @@
+/* =======================
+         MESMO CSS DA PÁGINA LOGIN
+      ========================== */
+
+body {
+  margin: 0; /* Remove espaço padrão ao redor da página */
+  font-family: "Work Sans", sans-serif; /* Fonte usada na página */
+  background-color: #f3ece4; /* Cor de fundo suave */
+}
+
+/* ==========================================================
+   CONTÊINER PRINCIPAL
+   Divide a tela em 2 partes usando Flexbox
+========================================================== */
+
+.container {
+  display: flex; /* Coloca os filhos lado-a-lado */
+  height: 100vh; /* Ocupa a tela inteira na vertical */
+}
+
+/* ==========================================================
+   LADO ESQUERDO (IMAGEM DE FUNDO)
+========================================================== */
+
+.left-panel {
+  flex: 2; /* AUMENTA a área da imagem */
+  background: url("img/logo.png") center/cover no-repeat;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 40px;
+}
+
+/* ----------------------------------------------------------
+   LOGO NO CANTO SUPERIOR ESQUERDO
+---------------------------------------------------------- */
+
+.logo-box {
+  position: absolute; /* Permite colocar sobre a imagem */
+  top: 25px; /* Distância do topo */
+  left: 25px; /* Distância da esquerda */
+  display: flex; /* Deixa o ícone e o texto alinhados */
+  align-items: center;
+  gap: 10px; /* Espaço entre o ícone e o texto */
+}
+
+/* Ícone da logo (Material Symbols) */
+.logo-icon {
+  font-family: "Material Symbols Rounded";
+  font-size: 40px;
+  color: white;
+  font-variation-settings: "FILL" 0,
+    /* 0 = contorno, 1 = preenchido */ "wght" 400, /* Peso da linha */ "GRAD" 0,
+    /* Gradiente */ "opsz" 48; /* Nitidez */
+}
+
+/* Texto ao lado do ícone */
+.logo-text {
+  color: white;
+  font-size: 22px;
+  font-weight: 700;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4); /* Sombra para melhor leitura */
+}
+
+/* ==========================================================
+   LADO DIREITO (FORMULÁRIO)
+========================================================== */
+
+.right-panel {
+  flex: 1.4; /* aumenta a largura para ficar igual ao modelo */
+  display: flex;
+  justify-content: flex-start; /* empurra o conteúdo para a esquerda */
+  align-items: center;
+  padding-left: 120px; /* distancia o formulário da borda esquerda */
+  background: #f3ece4;
+}
+
+/* Caixa do formulário */
+.form-box {
+  width: 100%;
+  max-width: 360px;
+
+  /* move o formulário um pouco para baixo */
+  margin-top: 40px;
+}
+
+/* ----------------------------------------------------------
+   TÍTULOS DO FORMULÁRIO
+---------------------------------------------------------- */
+
+.heading {
+  font-size: 34px;
+  font-weight: 900;
+  color: #4e3b2e;
+  margin: 0;
+  margin-bottom: 6px; /* Espaço abaixo */
+}
+
+.subheading {
+  margin-top: 5px;
+  margin-bottom: 25px;
+  color: #6c5a4b;
+  font-size: 16px;
+}
+
+/* ==========================================================
+   ESTILOS DOS CAMPOS (LABEL + INPUT + ÍCONE)
+========================================================== */
+
+.label {
+  font-weight: 600;
+  margin-top: 15px;
+  margin-bottom: 6px;
+  color: #4e3b2e;
+}
+
+/* Caixa que combina ícone + campo */
+.input-group {
+  position: relative; /* Necessário para posição do ícone */
+  margin-bottom: 15px;
+}
+
+/* Ícone dentro do campo */
+.icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%); /* Centraliza verticalmente */
+  font-family: "Material Symbols Rounded";
+  font-size: 22px;
+  color: #6c5a4b;
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
+}
+
+/* ----------------------------------------------------------
+   ESTILO DO INPUT
+---------------------------------------------------------- */
+
+.input-group input {
+  width: 100%;
+  padding: 14px 14px 14px 42px; /* Espaço à esquerda para o ícone */
+  border-radius: 10px; /* Bordas arredondadas */
+  border: 1px solid #d9c7b3; /* Borda suave */
+  background: #fcf7f0; /* Cor clara */
+  font-size: 16px;
+}
+
+.input-group input:focus {
+  border-color: #c8a265; /* cor de foco */
+  outline: none;
+}
+
+/* Link 'esqueceu a senha?' */
+.forgot {
+  display: block;
+  text-align: right;
+  color: #6c5a4b;
+  font-size: 14px;
+  text-decoration: underline;
+}
+
+/* ==========================================================
+   BOTÃO PRINCIPAL ("Entrar")
+========================================================== */
+
+.btn {
+  width: 100%;
+  margin-top: 20px;
+  padding: 14px;
+  background: #b89a7a; /* Cor do botão */
+  border: none;
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
+  border-radius: 10px;
+  cursor: pointer; /* Mostra a "mãozinha" ao passar o mouse */
+  transition: 0.2s; /* Suaviza a animação */
+}
+
+.btn:hover {
+  background: #c8a265; /* Cor ao passar o mouse */
+}
+
+/* ==========================================================
+   TEXTO "Criar conta"
+========================================================== */
+
+.signup {
+  text-align: center;
+  margin-top: 22px;
+  color: #6c5a4b;
+}
+
+.signup a {
+  font-weight: 700;
+  color: #b89a7a;
+  text-decoration: underline;
+}

@@ -1,0 +1,185 @@
+/* Estilos para ícones do Material Symbols */
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+}
+
+.material-symbols-outlined.fill {
+  font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 24;
+}
+
+/* Animações para melhorar a experiência do usuário */
+.fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Efeitos de hover para cards de música */
+.music-card {
+  transition: all 0.3s ease;
+}
+
+.music-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Estados ativos para filtros */
+.filter-chip.active {
+  background-color: rgba(200, 162, 101, 0.3);
+  color: #4e3b2e;
+}
+
+.dark .filter-chip.active {
+  background-color: rgba(200, 162, 101, 0.4);
+  color: #f3ece4;
+}
+
+/* Barra de progresso interativa */
+.progress-container {
+  cursor: pointer;
+  position: relative;
+}
+
+.progress-bar {
+  transition: width 0.1s linear;
+}
+
+/* Estilos para o player de música */
+.audio-player {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* Melhorias de responsividade para telas pequenas */
+@media (max-width: 768px) {
+  .music-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .player-controls {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .player-info {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .player-volume {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .music-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .filter-chips {
+    padding-bottom: 0.5rem;
+  }
+
+  .filter-chip {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.75rem;
+  }
+}
+
+/* Estados de loading */
+.loading {
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+.loading::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  margin: -10px 0 0 -10px;
+  border: 2px solid #f3f3f3;
+  border-top: 2px solid #c8a265;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Melhorias de contraste para modo escuro */
+@media (prefers-color-scheme: dark) {
+  .dark\:bg-\[\#2c2821\] {
+    background-color: #2c2821;
+  }
+}
+
+/* Estilos para a barra de busca com resultados */
+.search-results {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: #f3ece4;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  max-height: 300px;
+  overflow-y: auto;
+  z-index: 10;
+}
+
+.dark .search-results {
+  background-color: #2c2821;
+  border: 1px solid rgba(184, 154, 122, 0.2);
+}
+
+.search-result-item {
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.search-result-item:hover {
+  background-color: rgba(200, 162, 101, 0.2);
+}
+
+/* Animações para transições suaves */
+.transition-all {
+  transition: all 0.3s ease;
+}
+
+/* Efeito de pulso para o botão de play quando está tocando */
+.playing .play-button {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(200, 162, 101, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(200, 162, 101, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(200, 162, 101, 0);
+  }
+}

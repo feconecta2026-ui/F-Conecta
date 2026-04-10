@@ -1,0 +1,140 @@
+{
+  "saints": [
+    {
+      "id": 1,
+      "name": "São Francisco de Assis",
+      "feastDay": "4 de Outubro",
+      "image": "../img/santos/sao-francisco.jpeg",
+      "categories": ["padroeiros"],
+      "description": "Fundador da Ordem Franciscana.",
+      "bio": "São Francisco de Assis foi fundador da Ordem Franciscana e exemplo de pobreza, paz e amor a toda a criação."
+    },
+    {
+      "id": 2,
+      "name": "Santa Teresinha do Menino Jesus",
+      "feastDay": "1 de Outubro",
+      "image": "../img/santos/santa-teresinha.png",
+      "categories": ["doutores"],
+      "description": "Doutora da Igreja e carmelita.",
+      "bio": "Santa Teresinha ficou conhecida como a santa da pequena via, ensinando o caminho da simplicidade e confiança em Deus."
+    },
+    {
+      "id": 3,
+      "name": "Santo Agostinho",
+      "feastDay": "28 de Agosto",
+      "image": "../img/santos/santo-agostinho.png",
+      "categories": ["doutores"],
+      "description": "Bispo e Doutor da Igreja.",
+      "bio": "Santo Agostinho foi bispo de Hipona, grande teólogo e um dos mais importantes Doutores da Igreja."
+    },
+    {
+      "id": 4,
+      "name": "Santa Clara de Assis",
+      "feastDay": "11 de Agosto",
+      "image": "../img/santos/santa-clara.png",
+      "categories": ["padroeiros"],
+      "description": "Fundadora das Clarissas.",
+      "bio": "Santa Clara de Assis foi fundadora da Ordem das Clarissas e discípula de São Francisco."
+    },
+    {
+      "id": 5,
+      "name": "São Bento de Núrsia",
+      "feastDay": "11 de Julho",
+      "image": "../img/santos/sao-bento.png",
+      "categories": ["padroeiros"],
+      "description": "Patriarca do monaquismo ocidental.",
+      "bio": "São Bento de Núrsia é conhecido por sua regra monástica e pela medalha de proteção espiritual."
+    },
+    {
+      "id": 6,
+      "name": "Santa Catarina de Sena",
+      "feastDay": "29 de Abril",
+      "image": "../img/santos/santa-catarina.jpeg",
+      "categories": ["doutores"],
+      "description": "Mística e Doutora da Igreja.",
+      "bio": "Santa Catarina de Sena foi mística, conselheira de papas e Doutora da Igreja."
+    },
+    {
+      "id": 7,
+      "name": "São João Paulo II",
+      "feastDay": "22 de Outubro",
+      "image": "../img/santos/joao-paulo.png",
+      "categories": ["padroeiros"],
+      "description": "Papa missionário e santo contemporâneo.",
+      "bio": "São João Paulo II foi um grande papa missionário, defensor da dignidade humana e da fé cristã."
+    },
+    {
+      "id": 8,
+      "name": "Santa Faustina Kowalska",
+      "feastDay": "5 de Outubro",
+      "image": "../img/santos/faustina.png",
+      "categories": ["padroeiros"],
+      "description": "Apóstola da Divina Misericórdia.",
+      "bio": "Santa Faustina Kowalska ficou conhecida por divulgar a devoção à Divina Misericórdia."
+    },
+    {
+      "id": 9,
+      "name": "Nossa Senhora Aparecida",
+      "feastDay": "12 de Outubro",
+      "image": "../img/santos/aparecida.png",
+      "categories": ["marianas", "padroeiros"],
+      "description": "Padroeira do Brasil.",
+      "bio": "Nossa Senhora Aparecida é a Padroeira do Brasil e sinal de fé e esperança para o povo brasileiro."
+    },
+    {
+      "id": 10,
+      "name": "São José",
+      "feastDay": "19 de Março",
+      "image": "../img/santos/sao-jose.png",
+      "categories": ["padroeiros"],
+      "description": "Esposo de Maria e pai adotivo de Jesus.",
+      "bio": "São José foi o esposo da Virgem Maria e pai adotivo de Jesus Cristo."
+    },
+    {
+      "id": 11,
+      "name": "São Sebastião",
+      "feastDay": "20 de Janeiro",
+      "image": "../img/santos/sao-sebastiao.png",
+      "categories": ["martires"],
+      "description": "Mártir da Igreja.",
+      "bio": "São Sebastião foi um soldado romano martirizado por sua fé cristã."
+    },
+    {
+      "id": 12,
+      "name": "Nossa Senhora da Conceição",
+      "feastDay": "8 de Dezembro",
+      "image": "../img/santos/conceicao.png",
+      "categories": ["marianas"],
+      "description": "Título mariano da Imaculada Conceição.",
+      "bio": "Nossa Senhora da Conceição é venerada sob o mistério da Imaculada Conceição de Maria."
+    },
+    {
+      "id": 13,
+      "name": "São João Batista",
+      "feastDay": "24 de Junho",
+      "image": "../img/santos/joao-batista.png",
+      "categories": ["martires"],
+      "description": "Precursor de Jesus Cristo.",
+      "bio": "São João Batista preparou o caminho do Senhor e anunciou a vinda de Jesus."
+    },
+    {
+      "id": 14,
+      "name": "Santa Rita de Cássia",
+      "feastDay": "22 de Maio",
+      "image": "../img/santos/santa-rita.png",
+      "categories": ["padroeiros"],
+      "description": "Santa das causas impossíveis.",
+      "bio": "Santa Rita é conhecida como intercessora nos casos mais difíceis e impossíveis."
+    },
+
+    {
+      "id": 15,
+      "name": "Nossa Senhora de Guardalupe",
+      "feastDay": "12 de Dezembro",
+      "image": "../img/santos/guardalupe.png",
+      "categories": ["padroeiros"],
+      "description": "Santa das causas impossíveis.",
+      "bio": "Nossa Senhora de Guardalupe é venerada como padroeira das Américas."
+    }
+  ]
+}

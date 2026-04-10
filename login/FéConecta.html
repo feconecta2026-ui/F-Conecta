@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FéConecta - Login</title>
+
+    <!-- Importando a fonte Work Sans -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Arquivo de estilo externo -->
+    <link rel="stylesheet" href="FéConecta.css" />
+
+    <!--link da logo -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+
+    <!-- link dos icons da tela de login -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- CONTAINER PRINCIPAL (divide a tela em 2 lados) -->
+    <div class="container">
+      <!-- LADO ESQUERDO (IMAGEM) -->
+      <div class="left-panel">
+        <!-- Logo com ícone -->
+        <div class="logo-box">
+          <span class="material-symbols-outlined logo-icon">raven</span>
+          <p class="logo-text">FéConecta</p>
+        </div>
+      </div>
+
+      <!-- LADO DIREITO (FORMULÁRIO) -->
+      <div class="right-panel">
+        <div class="form-box">
+          <!-- Título da página -->
+          <h1 class="heading">Bem-vindo de volta</h1>
+          <p class="subheading">Acesse sua conta para continuar</p>
+
+          <!-- FORMULÁRIO CORRIGIDO - SEM DUPLICAÇÃO -->
+          <form id="loginForm">
+            <!-- CAMPO DE EMAIL -->
+            <label class="label">Email ou Nome de Usuário</label>
+            <div class="input-group">
+              <span class="material-symbols-rounded icon">mail</span>
+              <input
+                id="email"
+                type="text"
+                placeholder="Digite seu email"
+                required
+              />
+            </div>
+
+            <!-- CAMPO DE SENHA -->
+            <label class="label">Senha</label>
+            <div class="input-group">
+              <span class="material-symbols-rounded icon">lock</span>
+              <input
+                id="senha"
+                type="password"
+                placeholder="Digite sua senha"
+                required
+              />
+            </div>
+
+            <!-- LINK ESQUECEU A SENHA -->
+            <a href="#" class="forgot">Esqueceu a senha?</a>
+
+            <!-- BOTÃO ENTRAR -->
+            <button type="submit" class="btn">Entrar</button>
+          </form>
+
+          <!-- CRIAR CONTA -->
+          <p class="signup">
+            Não tem uma conta?
+            <a href="register.html">Crie aqui</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Verificar se usuário já está logado
+      document.addEventListener("DOMContentLoaded", function () {
+        const user = localStorage.getItem("loggedUser");
+        if (user) {
+          window.location.href = "inicio/inicio.html"; // CORRIGIDO para sua estrutura
+        }
+      });
+
+      // Função de hash simples
+      function hashSenha(senha) {
+        return btoa(senha);
+      }
+
+      // Pega usuário salvo
+      function getUser(email) {
+        const users = JSON.parse(localStorage.getItem("users")) || [];
+        return users.find((u) => u.email === email);
+      }
+
+      // Evento do formulário
+      document
+        .getElementById("loginForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          const email = document.getElementById("email").value.trim();
+          const senha = document.getElementById("senha").value.trim();
+
+          if (!email || !senha) {
+            alert("Preencha todos os campos!");
+            return;
+          }
+
+          const user = getUser(email);
+
+          if (!user) {
+            alert("Usuário não encontrado!");
+            return;
+          }
+
+          if (user.senha !== hashSenha(senha)) {
+            alert("Senha incorreta!");
+            return;
+          }
+
+          // Login OK → salva sessão com dados completos
+          localStorage.setItem(
+            "loggedUser",
+            JSON.stringify({
+              ...user,
+              lastLogin: new Date().toISOString(),
+            })
+          );
+
+          alert("Login realizado com sucesso!");
+          window.location.href = "inicio/inicio.html"; // CORRIGIDO para sua estrutura
+        });
+    </script>
+  </body>
+</html>

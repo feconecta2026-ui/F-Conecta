@@ -1,0 +1,28 @@
+<!-- COLE NO HTML -->
+<div id="dailyPrayerCard"></div>
+
+<!-- NO FINAL DO BODY -->
+<script src="../js/daily-prayer.js"></script>
+<script>
+async function loadDailyPrayer() {
+  const res = await fetch("../data/prayers.json");
+  const data = await res.json();
+
+  const prayer = getDailyPrayer(data.prayers);
+
+  const container = document.getElementById("dailyPrayerCard");
+
+  container.innerHTML = `
+    <div style="background:#F3ECE4;padding:20px;border-radius:12px;">
+      <h2>🙏 Oração do Dia</h2>
+      <h3 style="color:#C8A265;">${prayer.title}</h3>
+      <p>${prayer.description}</p>
+      <button onclick="openPrayer(${prayer.id})">
+        Rezar agora
+      </button>
+    </div>
+  `;
+}
+
+loadDailyPrayer();
+</script>

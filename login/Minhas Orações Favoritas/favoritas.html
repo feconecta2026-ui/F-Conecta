@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html class="light" lang="pt">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Minhas Orações Favoritas</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="Minhas Orações Favoritas.css" />
+    <link rel="stylesheet" href="../js/sidebar-global.css" />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#c8a265",
+              "background-light": "#f8f7f6",
+              "background-dark": "#1e1a14",
+              "screen-bg": "#D9C7B3",
+              secondary: "#B89A7A",
+              "card-bg": "#F3ECE4",
+              "text-main": "#4E3B2E",
+              "text-secondary": "#6C5A4B",
+            },
+            fontFamily: {
+              display: ["Manrope", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="font-display bg-background-light dark:bg-background-dark">
+    <div class="relative flex min-h-screen w-full">
+      <aside id="sidebar"></aside>
+
+      <main class="flex-1 bg-screen-bg p-8 lg:p-12">
+        <div class="mx-auto max-w-4xl">
+          <header class="mb-8 fade-in">
+            <h1 class="text-text-main text-4xl font-black leading-tight tracking-[-0.033em]">
+              Minhas Orações Favoritas
+            </h1>
+            <p class="text-text-secondary text-base font-normal leading-normal mt-2">
+              Sua coleção pessoal de orações para reflexão e paz.
+            </p>
+          </header>
+
+          <div class="flex flex-col sm:flex-row justify-between items-center gap-4 mb-6 fade-in">
+            <div class="relative w-full max-w-sm">
+              <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-text-secondary">search</span>
+              <input
+                id="searchInput"
+                class="w-full h-10 pl-10 pr-4 bg-card-bg border border-secondary/50 rounded-lg text-text-main placeholder-text-secondary focus:ring-primary focus:border-primary text-sm"
+                placeholder="Buscar em favoritos..."
+                type="text"
+                aria-label="Buscar orações"
+              />
+            </div>
+
+            <div class="flex gap-2 self-end sm:self-auto relative">
+              <button
+                id="filterButton"
+                class="flex items-center justify-center size-10 bg-card-bg text-text-main border border-secondary/50 rounded-lg hover:bg-secondary/20 transition-colors"
+                title="Filtrar"
+                aria-label="Abrir opções de filtro"
+              >
+                <span class="material-symbols-outlined">filter_list</span>
+              </button>
+
+              <div
+                id="filterMenu"
+                class="hidden absolute right-0 mt-12 bg-white rounded-lg shadow-lg p-2 z-10 border border-secondary/20 min-w-56"
+              >
+                <button class="flex items-center gap-2 w-full px-3 py-2 text-sm text-text-main hover:bg-secondary/20 rounded" data-filter="all">
+                  <span class="material-symbols-outlined text-sm">check_box</span>
+                  Todas as orações
+                </button>
+                <button class="flex items-center gap-2 w-full px-3 py-2 text-sm text-text-main hover:bg-secondary/20 rounded" data-filter="marianas">
+                  <span class="material-symbols-outlined text-sm">check_box_outline_blank</span>
+                  Orações Marianas
+                </button>
+                <button class="flex items-center gap-2 w-full px-3 py-2 text-sm text-text-main hover:bg-secondary/20 rounded" data-filter="diarias">
+                  <span class="material-symbols-outlined text-sm">check_box_outline_blank</span>
+                  Orações Diárias
+                </button>
+                <button class="flex items-center gap-2 w-full px-3 py-2 text-sm text-text-main hover:bg-secondary/20 rounded" data-filter="santos">
+                  <span class="material-symbols-outlined text-sm">check_box_outline_blank</span>
+                  Orações aos Santos
+                </button>
+                <button class="flex items-center gap-2 w-full px-3 py-2 text-sm text-text-main hover:bg-secondary/20 rounded" data-filter="familia">
+                  <span class="material-symbols-outlined text-sm">check_box_outline_blank</span>
+                  Orações da Família
+                </button>
+                <button class="flex items-center gap-2 w-full px-3 py-2 text-sm text-text-main hover:bg-secondary/20 rounded" data-filter="curas">
+                  <span class="material-symbols-outlined text-sm">check_box_outline_blank</span>
+                  Orações de Cura
+                </button>
+                <button class="flex items-center gap-2 w-full px-3 py-2 text-sm text-text-main hover:bg-secondary/20 rounded" data-filter="emergencia">
+                  <span class="material-symbols-outlined text-sm">check_box_outline_blank</span>
+                  Orações de Emergência
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div id="prayersContainer" class="flex flex-col gap-4"></div>
+
+          <div
+            id="prayerModal"
+            class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50 hidden"
+          >
+            <div class="bg-card-bg rounded-xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+              <div class="p-6">
+                <div class="flex justify-between items-center mb-4">
+                  <h2 id="modalTitle" class="text-text-main text-2xl font-bold"></h2>
+                  <button id="closeModal" class="text-text-secondary hover:text-text-main">
+                    <span class="material-symbols-outlined">close</span>
+                  </button>
+                </div>
+                <div id="modalContent" class="text-text-main leading-relaxed"></div>
+                <div class="mt-6 flex justify-end">
+                  <button
+                    id="closeModalBtn"
+                    class="px-4 py-2 bg-primary text-white rounded-lg hover:opacity-90 transition-opacity"
+                  >
+                    Fechar
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script src="favoritas.js"></script>
+    <script src="../js/app-config.js"></script>
+    <script src="../js/app-state.js"></script>
+    <script src="../js/app-ui.js"></script>
+    <script>
+      FeUI.protectPage();
+      FeUI.renderSidebar("favoritos");
+      if (window.FeState) FeState.applyUserToPage();
+    </script>
+  </body>
+</html>

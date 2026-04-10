@@ -1,0 +1,22 @@
+#sidebar {
+  width: 18rem;
+  min-height: 100vh;
+  background-color: #f3ece4;
+  border-right: 1px solid rgba(200, 162, 101, 0.2);
+  padding: 1rem;
+  box-sizing: border-box;
+  flex-shrink: 0;
+}
+.fe-sidebar-brand { margin-bottom: 1.5rem; }
+.fe-sidebar-brand h1 { margin: 0; font-size: 1.4rem; color: #4e3b2e; font-weight: 800; }
+.fe-sidebar-brand p { margin: 0.2rem 0 0; color: #6c5a4b; font-size: 0.95rem; }
+.fe-user-profile { display: flex; align-items: center; gap: .75rem; margin-bottom: 1.75rem; padding: .5rem .25rem; }
+.fe-user-avatar { width: 2.75rem; height: 2.75rem; border-radius: 9999px; background: linear-gradient(135deg, #d9c7b3, #c8a265); flex-shrink: 0; }
+.fe-user-info h2 { margin: 0; font-size: 1rem; color: #4e3b2e; font-weight: 700; }
+.fe-user-info p { margin: .15rem 0 0; font-size: .875rem; color: #6c5a4b; }
+.fe-sidebar-nav { display: flex; flex-direction: column; gap: .5rem; }
+.fe-nav-item { display: flex; align-items: center; gap: .75rem; text-decoration: none; border-radius: .75rem; padding: .85rem 1rem; color: #4e3b2e; transition: .2s ease; font-weight: 500; }
+.fe-nav-item:hover { background: rgba(200, 162, 101, 0.12); }
+.fe-nav-item.active { background: rgba(200, 162, 101, 0.20); }
+.fe-nav-icon { font-size: 1.3rem; line-height: 1; }
+.fe-nav-text { line-height: 1.2; }

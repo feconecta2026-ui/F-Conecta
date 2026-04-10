@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FéConecta - Cadastro</title>
+    <!-- Arquivo de estilo externo -->
+    <link rel="stylesheet" href="register.css" />
+
+    <!-- GOOGLE FONTS -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--link da logo -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="container">
+      <!-- LADO ESQUERDO -->
+      <div class="left-panel">
+        <div class="logo-box">
+          <span class="material-symbols-outlined logo-icon">raven</span>
+          <p class="logo-text">FéConecta</p>
+        </div>
+      </div>
+
+      <!-- LADO DIREITO -->
+      <div class="right-panel">
+        <div class="form-box">
+          <h1 class="heading">Criar conta</h1>
+          <p class="subheading">Preencha os dados para continuar</p>
+
+          <form id="registerForm">
+            <!-- NOME -->
+            <label class="label">Nome completo</label>
+            <div class="input-group">
+              <span class="material-symbols-rounded icon">person</span>
+              <input id="nome" type="text" placeholder="Seu nome" required />
+            </div>
+
+            <!-- EMAIL -->
+            <label class="label">Email</label>
+            <div class="input-group">
+              <span class="material-symbols-rounded icon">mail</span>
+              <input id="email" type="email" placeholder="Seu email" required />
+            </div>
+
+            <!-- SENHA -->
+            <label class="label">Senha</label>
+            <div class="input-group">
+              <span class="material-symbols-rounded icon">lock</span>
+              <input
+                id="senha"
+                type="password"
+                placeholder="Crie uma senha"
+                required
+              />
+            </div>
+
+            <!-- CONFIRMAR SENHA -->
+            <label class="label">Confirmar senha</label>
+            <div class="input-group">
+              <span class="material-symbols-rounded icon">lock</span>
+              <input
+                id="confirmar"
+                type="password"
+                placeholder="Repita a senha"
+                required
+              />
+            </div>
+
+            <button type="submit" class="btn">Criar conta</button>
+          </form>
+
+          <!-- LINK CORRIGIDO ↓ -->
+          <p class="signup">
+            Já tem uma conta?
+            <a href="FéConecta.html">Entrar</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Hashear senha (demo)
+      function hashSenha(senha) {
+        return btoa(senha);
+      }
+
+      // Salvar usuário
+      function salvarUsuario(user) {
+        const users = JSON.parse(localStorage.getItem("users")) || [];
+        users.push(user);
+        localStorage.setItem("users", JSON.stringify(users));
+      }
+
+      document
+        .getElementById("registerForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          const nome = document.getElementById("nome").value.trim();
+          const email = document.getElementById("email").value.trim();
+          const senha = document.getElementById("senha").value.trim();
+          const confirmar = document.getElementById("confirmar").value.trim();
+
+          if (!nome || !email || !senha || !confirmar) {
+            alert("Preencha todos os campos!");
+            return;
+          }
+
+          if (senha !== confirmar) {
+            alert("As senhas não coincidem!");
+            return;
+          }
+
+          const users = JSON.parse(localStorage.getItem("users")) || [];
+          if (users.find((u) => u.email === email)) {
+            alert("Este email já está cadastrado!");
+            return;
+          }
+
+          salvarUsuario({
+            nome,
+            email,
+            senha: hashSenha(senha),
+          });
+
+          alert("Conta criada com sucesso!");
+          // REDIRECIONAMENTO CORRIGIDO ↓
+          window.location.href = "FéConecta.html";
+        });
+    </script>
+  </body>
+</html>

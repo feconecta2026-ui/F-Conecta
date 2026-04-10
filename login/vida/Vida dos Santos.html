@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FéConecta</title>
+    <!-- Importação da fonte Manrope do Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Importação dos ícones Material Symbols -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <!-- Link para o arquivo CSS externo -->
+    <link rel="stylesheet" href="Vida dos Santos.css" />
+  </head>
+  <body>
+    <!-- Container principal com layout flexível -->
+    <div class="container">
+      <!-- Sidebar de navegação -->
+      <aside class="sidebar">
+        <!-- Perfil do usuário -->
+        <div class="user-profile">
+          <div
+            class="user-avatar"
+            style="
+              background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBm-JZpoiyPaMpg0-Ejwu82cBYoCb6Bv6oe8lxV-zSUTQjH2D-c5HAt7AQ2-caTmNEIus6XJxMCjZbofIxVOjAbEwofV-ejjQF2YPwdsPDt-lPSpVI_JK-Y_RqOB1VRrHq46NGaVuFQ6PKWq_AhOCfO69R_hipd1DKK-UlQ5xN-m2Zm2XSMgeQT_T_d99eK6M-RCKtdTblqnZVdAO9oE2iil8dCnyCvP6raGRku3B0qiuRGefmddrtWwff2pzwDe1qoHWTCqCdrU-w');
+            "
+          ></div>
+          <div class="user-info">
+            <h1 class="user-name">José da Silva</h1>
+            <p class="user-email">jose.silva@email.com</p>
+          </div>
+        </div>
+
+        <!-- Navegação principal -->
+        <nav class="main-nav">
+          <div class="nav-section">
+            <a class="nav-item" href="../inicio/inicio.html">
+              <span class="material-symbols-outlined">home</span>
+              <p class="nav-text">Início</p>
+            </a>
+            <a class="nav-item active" href="vida.html">
+              <span class="material-symbols-outlined filled-icon"
+                >auto_stories</span
+              >
+              <p class="nav-text">Vida dos Santos</p>
+            </a>
+            <a class="nav-item" href="../oracao/oracao.html">
+              <span class="material-symbols-outlined">health_cross</span>
+              <p class="nav-text">Orações</p>
+            </a>
+            <a class="nav-item" href="../terco/terco.html">
+              <span class="material-symbols-outlined">folded_hands</span>
+              <p class="nav-text">Santo Rosário</p>
+            </a>
+          </div>
+
+          <!-- Navegação secundária -->
+          <div class="nav-section">
+            <a class="nav-item" href="../configuracoes/configuracoes.html">
+              <span class="material-symbols-outlined">settings</span>
+              <p class="nav-text">Configurações</p>
+            </a>
+          </div>
+        </nav>
+      </aside>
+
+      <!-- Conteúdo principal -->
+      <main class="main-content">
+        <div class="content-container">
+          <!-- Cabeçalho -->
+          <div class="header">
+            <div class="header-content">
+              <h1 class="page-title">Vida dos Santos</h1>
+              <p class="page-subtitle">
+                Explore biografias, milagres e ensinamentos dos pilares da nossa
+                fé.
+              </p>
+            </div>
+          </div>
+
+          <!-- Barra de ferramentas -->
+          <div class="toolbar">
+            <!-- Campo de busca -->
+            <div class="search-container">
+              <label class="search-label">
+                <div class="search-wrapper">
+                  <div class="search-icon">
+                    <span class="material-symbols-outlined">search</span>
+                  </div>
+                  <input
+                    class="search-input"
+                    placeholder="Buscar santo pelo nome..."
+                    value=""
+                  />
+                </div>
+              </label>
+            </div>
+
+            <!-- Filtros -->
+            <div class="filters-container">
+              <button class="filter-button">
+                <span class="material-symbols-outlined">calendar_month</span>
+                <p class="filter-text">Mês da Festividade</p>
+                <span class="material-symbols-outlined">expand_more</span>
+              </button>
+              <button class="filter-button">
+                <span class="material-symbols-outlined">shield</span>
+                <p class="filter-text">Mártires</p>
+                <span class="material-symbols-outlined">expand_more</span>
+              </button>
+              <button class="filter-button">
+                <span class="material-symbols-outlined">school</span>
+                <p class="filter-text">Doutores da Igreja</p>
+                <span class="material-symbols-outlined">expand_more</span>
+              </button>
+              <button class="filter-button">
+                <span class="material-symbols-outlined">group</span>
+                <p class="filter-text">Padroeiros</p>
+                <span class="material-symbols-outlined">expand_more</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Grid de santos -->
+          <div class="saints-grid">
+            <!-- Card de São Francisco de Assis -->
+            <div class="saint-card">
+              <div
+                class="saint-image"
+                style="
+                  background-image: url('https://conteudo.imguol.com.br/c/entretenimento/5e/2022/08/10/sao-francisco-de-assis-1660156134136_v2_450x600.png');
+                "
+              ></div>
+              <div class="saint-info">
+                <p class="saint-name">São Francisco de Assis</p>
+                <p class="saint-feast">Festa em 4 de Outubro</p>
+              </div>
+            </div>
+
+            <!-- Card de Santa Teresinha do Menino Jesus -->
+            <div class="saint-card">
+              <div
+                class="saint-image"
+                style="
+                  background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCO3mkGV-GvPedq_zATTGhVEkZqHabU_vDMvEsTEfxLz9Fztt1iAf8xAZZkbicOxoJtT78RN01EqjRfr6ZNurIVyT2IGFigtdgYHVMjnxipdMAfsi0wSt8KDHic_8-5TGRAgaNORGgwkJvb-h1k_pcZ24q8iAUpRV3F8sZmciVuDpTEfqcD22GiZGAjlRxO22DtmbeMs8FbIjnz4EhvvBBBo4oQmCnCKGKm2oDX1TVmoQuXovH-7K4cZ_5BLvh4KMxdUahJWgx1Q5c');
+                "
+              ></div>
+              <div class="saint-info">
+                <p class="saint-name">Santa Teresinha do Menino Jesus</p>
+                <p class="saint-feast">Festa em 1 de Outubro</p>
+              </div>
+            </div>
+
+            <!-- Card de Santo Agostinho -->
+            <div class="saint-card">
+              <div
+                class="saint-image"
+                style="
+                  background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAJKX27qXUAtyB9EtcQ55EbkCZipwJz4SfQCDFQxFF4rMLhuGhYTzGGprccyLGZY_aSbHaP-pxIsiIS04iXylEyVKDOTOex0QqxNET_jGTaZ8WDWD0aUeUNnqDj-L3EFDIsSC_cSpiI3YTe_5M3fpMK9VrfgOJWSHhAD6pYO-yngbx6RjtBNxp6WxKDKoiIW0TyNtXgBuSopAHmF8wWuofw-9udXdsYe0maPKxjDod8ZDYPybW-QHQ-xP4cBqeWawEpZVBZ-UameTs');
+                "
+              ></div>
+              <div class="saint-info">
+                <p class="saint-name">Santo Agostinho</p>
+                <p class="saint-feast">Festa em 28 de Agosto</p>
+              </div>
+            </div>
+
+            <!-- Card de Santa Clara de Assis -->
+            <div class="saint-card">
+              <div
+                class="saint-image"
+                style="
+                  background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCts2geA0pzgASwiFZOZNbGqUmux7cT_SoZax_VL-j71QzIDXpzo8bw4CEH7KP1I2p21C0vatV2OJQYdTKyuOkCWFxmQBlT-c5_SqLHa9Yj3mQZcMi1TDuUfm5gldqkub1QN34dLiigvRS7seSIdIPX1wXeE2u25oM6JJI_ngJ1paXBewZdo3S-NUMph2dbv1XPYW_l9R774ReDCt8qQwMdtnwd1iXdqHUVop313CkqPs9D3DWHK5V_PZJRuwnnZziL5rGV7tAh_aU');
+                "
+              ></div>
+              <div class="saint-info">
+                <p class="saint-name">Santa Clara de Assis</p>
+                <p class="saint-feast">Festa em 11 de Agosto</p>
+              </div>
+            </div>
+
+            <!-- Card de São Bento de Núrsia -->
+            <div class="saint-card">
+              <div
+                class="saint-image"
+                style="
+                  background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBkXqMB0UFqeIkUI4ckCAJb_mtLrtU0ezJMW5Zv-QIB1znOHl9NRtBViXr0nzFyflQK1b7wKJc4Calg6y1W02xsfSkQkHOIZKIhV43V6k7r3TjhhNKqs5iovBgX9CB3CzMriOmyPJHabOifpqqdDLIAShaNas8YmKSygd-xUC4ONM3EhQfTZd6-Ydn7UsgwhPDc3x9Xwus-B6wfVTgVWuMrlqPXN83TBLTLJj1emsOOGGg6RXq-CldxLjRrd5W93UFXN2DI4i_ZTNk');
+                "
+              ></div>
+              <div class="saint-info">
+                <p class="saint-name">São Bento de Núrsia</p>
+                <p class="saint-feast">Festa em 11 de Julho</p>
+              </div>
+            </div>
+
+            <!-- Card de Santa Catarina de Sena -->
+            <div class="saint-card">
+              <div
+                class="saint-image"
+                style="
+                  background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAiZ9uhyoCz4T8I6z_No7-GZIFayhxTO2c6Mjgl7RGrbu2-frLqy2S7wsmBjeu8eJ9ycJPemIzQyTGCoAZdLw-XhtuN0N04SHljWp1ne4nFRU6_rqgnBi1dsr1_z2dOJoCjbEA069zy-XvlfRyO4s1QnJeiqowmQEcLMVgrFRPnQon_4FPnq991MimJ05E5UOwijwrPRNDMQaAeuH6LKdVgFDY3i-yWFa459oBhcysoaLXbLvVtbeZ5iZQyj1NhhYTosgZUv4jVFG0');
+                "
+              ></div>
+              <div class="saint-info">
+                <p class="saint-name">Santa Catarina de Sena</p>
+                <p class="saint-feast">Festa em 29 de Abril</p>
+              </div>
+            </div>
+
+            <!-- Card de São João Paulo II -->
+            <div class="saint-card">
+              <div
+                class="saint-image"
+                style="
+                  background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAbxAbMjww_FHo_8LNlvmNmKX8_OOlzVasy14bNbZTid2FuCUwP6j1reeL5b9VIfDzOEX3qSMrlX2jJVHa8WFF_6XZinxHZob5tr55Pujsck1xoRA6kwSHcqdiqgfpeRcTa-s48L8Bh2KySvVuwwxPwS1aoCVRT4uonLHO6C9gFKGvBEVOJEDmaevicjJXPTciSuKRhrJ0I34D2hwDMQxErSPXpkaIq3uEdxCwWhUvfA1YjcTQP0jUkUT-WMajZicojxfj7oQrtN7M');
+                "
+              ></div>
+              <div class="saint-info">
+                <p class="saint-name">São João Paulo II</p>
+                <p class="saint-feast">Festa em 22 de Outubro</p>
+              </div>
+            </div>
+
+            <!-- Card de Santa Faustina Kowalska -->
+            <div class="saint-card">
+              <div
+                class="saint-image"
+                style="
+                  background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBYSCcPdTnSfuHPLYCvcwxcRhBf-iDOv7pJd7Mg9ARfxIYxBoJI8hjihYGkmmdYzd32viSKww5YBa6LmspsZO36N6f_Gf8n3efeFEL3cLuCYvNhNSDeOPgD2zeLvD9wMphn2dbsXAdOyoU36NY2b4625EX7BN2Ud4XblFmvLwC6zi_CeU2ZdDhe6_WsJL74ugMQDuMPgCbjaOwjdkoE_tw-Ykicf71IS4eIzdEuHM7Tu353GybJER8a25nHBtKxD97StSE8z7eHaKs');
+                "
+              ></div>
+              <div class="saint-info">
+                <p class="saint-name">Santa Faustina Kowalska</p>
+                <p class="saint-feast">Festa em 5 de Outubro</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

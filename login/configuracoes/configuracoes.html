@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Configurações - FéConecta</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Lora:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "app-bg": "#D9C7B3",
+              "app-secondary": "#B89A7A",
+              "app-highlight": "#C8A265",
+              "app-card": "#F3ECE4",
+              "app-text-main": "#4E3B2E",
+              "app-text-secondary": "#6C5A4B",
+            },
+            fontFamily: {
+              display: ["Manrope", "sans-serif"],
+              serif: ["Lora", "serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="stylesheet" href="configuracoes.css" />
+      <link rel="stylesheet" href="../js/sidebar-global.css" />
+  </head>
+  <body class="font-display bg-app-bg text-app-text-main">
+    <div class="flex h-screen w-full">
+      <!-- Sidebar -->
+      <aside id="sidebar"></aside>
+
+      <!-- Conteúdo Principal -->
+      <main class="settings-main">
+        <div class="settings-container">
+          <!-- Cabeçalho -->
+          <div class="settings-header">
+            <h1>Configurações</h1>
+            <p>Personalize sua experiência no FéConecta</p>
+          </div>
+
+          <!-- Seções de Configurações -->
+          <div class="settings-sections">
+            <!-- Aparência -->
+            <section class="settings-section">
+              <h2 class="section-title">
+                <span class="material-symbols-outlined">palette</span>
+                Aparência
+              </h2>
+
+              <div class="section-content">
+                <!-- Tema -->
+                <div class="setting-item">
+                  <div class="setting-info">
+                    <p class="setting-title">Modo Escuro</p>
+                    <p class="setting-description">Ativar tema escuro</p>
+                  </div>
+                  <label class="toggle-switch">
+                    <input type="checkbox" id="darkModeToggle" />
+                    <span class="toggle-slider"></span>
+                  </label>
+                </div>
+
+                <!-- Tamanho da Fonte -->
+                <div class="setting-group">
+                  <p class="setting-title">Tamanho da Fonte</p>
+                  <div class="font-size-buttons">
+                    <button class="font-size-btn" data-size="16">
+                      Pequeno
+                    </button>
+                    <button class="font-size-btn active" data-size="18">
+                      Médio
+                    </button>
+                    <button class="font-size-btn" data-size="20">Grande</button>
+                  </div>
+                </div>
+
+                <!-- Cor de Destaque -->
+                <div class="setting-group">
+                  <p class="setting-title">Cor de Destaque</p>
+                  <div class="color-options">
+                    <div class="color-option active" data-color="#C8A265"></div>
+                    <div class="color-option" data-color="#E91E63"></div>
+                    <div class="color-option" data-color="#2196F3"></div>
+                    <div class="color-option" data-color="#4CAF50"></div>
+                    <div class="color-option" data-color="#9C27B0"></div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <!-- Notificações -->
+            <section class="settings-section">
+              <h2 class="section-title">
+                <span class="material-symbols-outlined">notifications</span>
+                Notificações
+              </h2>
+
+              <div class="section-content">
+                <div class="setting-item">
+                  <div class="setting-info">
+                    <p class="setting-title">Lembretes de Oração</p>
+                    <p class="setting-description">Notificações diárias</p>
+                  </div>
+                  <label class="toggle-switch">
+                    <input type="checkbox" id="prayerReminders" checked />
+                    <span class="toggle-slider"></span>
+                  </label>
+                </div>
+
+                <div class="setting-item">
+                  <div class="setting-info">
+                    <p class="setting-title">Oração do Dia</p>
+                    <p class="setting-description">Enviar oração do dia</p>
+                  </div>
+                  <label class="toggle-switch">
+                    <input type="checkbox" id="dailyPrayer" checked />
+                    <span class="toggle-slider"></span>
+                  </label>
+                </div>
+
+                <div class="setting-item">
+                  <div class="setting-info">
+                    <p class="setting-title">Novas Orações</p>
+                    <p class="setting-description">Notificar novas orações</p>
+                  </div>
+                  <label class="toggle-switch">
+                    <input type="checkbox" id="newPrayers" />
+                    <span class="toggle-slider"></span>
+                  </label>
+                </div>
+              </div>
+            </section>
+
+            <!-- Privacidade e Dados -->
+            <section class="settings-section">
+              <h2 class="section-title">
+                <span class="material-symbols-outlined">security</span>
+                Privacidade e Dados
+              </h2>
+
+              <div class="section-content">
+                <div class="setting-item">
+                  <div class="setting-info">
+                    <p class="setting-title">Sincronização em Nuvem</p>
+                    <p class="setting-description">Salvar dados online</p>
+                  </div>
+                  <label class="toggle-switch">
+                    <input type="checkbox" id="cloudSync" />
+                    <span class="toggle-slider"></span>
+                  </label>
+                </div>
+
+                <button class="action-button" id="exportData">
+                  <div class="button-content">
+                    <p class="button-title">Exportar Dados</p>
+                    <p class="button-description">
+                      Baixar suas orações e favoritos
+                    </p>
+                  </div>
+                  <span class="material-symbols-outlined">download</span>
+                </button>
+
+                <button class="action-button" id="clearCache">
+                  <div class="button-content">
+                    <p class="button-title">Limpar Cache</p>
+                    <p class="button-description">
+                      Liberar espaço de armazenamento
+                    </p>
+                  </div>
+                  <span class="material-symbols-outlined">delete</span>
+                </button>
+              </div>
+            </section>
+
+            <!-- Sobre -->
+            <section class="settings-section">
+              <h2 class="section-title">
+                <span class="material-symbols-outlined">info</span>
+                Sobre o App
+              </h2>
+
+              <div class="section-content">
+                <div class="info-item">
+                  <p class="info-label">Versão</p>
+                  <p class="info-value">1.0.0</p>
+                </div>
+
+                <button class="action-button">
+                  <div class="button-content">
+                    <p class="button-title">Política de Privacidade</p>
+                  </div>
+                  <span class="material-symbols-outlined">chevron_right</span>
+                </button>
+
+                <button class="action-button">
+                  <div class="button-content">
+                    <p class="button-title">Termos de Uso</p>
+                  </div>
+                  <span class="material-symbols-outlined">chevron_right</span>
+                </button>
+
+                <button class="action-button">
+                  <div class="button-content">
+                    <p class="button-title">Avaliar App</p>
+                  </div>
+                  <span class="material-symbols-outlined">star</span>
+                </button>
+              </div>
+            </section>
+          </div>
+
+          <!-- Botões de Ação -->
+          <div class="action-buttons">
+            <button class="cancel-btn" onclick="window.history.back()">
+              Cancelar
+            </button>
+            <button class="save-btn" onclick="saveSettings()">
+              Salvar Alterações
+            </button>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <!-- Toast Container -->
+    <div id="toastContainer" class="toast-container"></div>
+
+    <script src="configuracoes.js"></script>
+  
+    <script src="../js/app-config.js"></script>
+    <script src="../js/app-state.js"></script>
+    <script src="../js/app-ui.js"></script>
+    <script>
+      FeUI.protectPage();
+      FeUI.renderSidebar("configuracoes");
+    </script>
+  </body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Foco & Oração - Terço Interativo</title>
+    <!-- Importação da fonte Manrope do Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Importação dos ícones Material Symbols -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <!-- Link para o arquivo CSS externo -->
+    <link rel="stylesheet" href="Terço .css" />
+      <link rel="stylesheet" href="../js/sidebar-global.css" />
+  </head>
+  <body>
+    <!-- Container principal -->
+    <div class="container">
+      <div class="app-wrapper">
+        <!-- Sidebar de navegação -->
+        <aside id="sidebar"></aside>
+
+        <!-- Conteúdo principal -->
+        <main class="main-content">
+          <div class="content-wrapper">
+            <!-- Cabeçalho -->
+            <header class="content-header">
+              <div class="header-info">
+                <h1 class="page-title">Terço de Santa Teresinha</h1>
+                <p class="page-subtitle">
+                  Contemple os mistérios com a intercessão da pequena flor.
+                </p>
+              </div>
+            </header>
+
+            <!-- Barra de progresso -->
+            <div class="progress-section">
+              <div class="progress-header">
+                <p class="progress-label">Progresso do Terço</p>
+                <p class="progress-percentage">25%</p>
+              </div>
+              <div class="progress-bar">
+                <div class="progress-fill" style="width: 25%"></div>
+              </div>
+            </div>
+
+            <!-- Card do mistério -->
+            <div class="mystery-card">
+              <div class="mystery-content">
+                <div class="mystery-image-container">
+                  <div
+                    class="mystery-image"
+                    style="
+                      background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDq52Y6Sf25ZOQQnGshnr5QvVYHQP_VPzLEUI4otVfp3g0mEqfSFfwRW2ZjrqV3zKX9ZyXoC4WbfJ4sAW7Je_vhoforET_H97SXQA8ovqFqX1kJypov6yc5GleLYvTrxINlOaT_1l4MzXNE4Ub0KkI4qxsUtdxBVETOiPl2avgSU_B8_Anj8zV3e9a9Vvdt3Puq99Iog1s_IBZRiXIA5iIAMQAo8ZQDKKMgcbTJEqS2WMi5DOMcLSDZ2TVuh5MK62LiqWb0mxGW5FQ');
+                    "
+                  ></div>
+                </div>
+                <div class="mystery-text">
+                  <p class="mystery-number">Primeiro Mistério Gozoso</p>
+                  <h2 class="prayer-title">Pai Nosso</h2>
+                  <p class="prayer-text">
+                    Pai nosso, que estais nos céus, santificado seja o vosso
+                    nome; venha a nós o vosso reino; seja feita a vossa vontade,
+                    assim na terra como no céu. O pão nosso de cada dia nos dai
+                    hoje; perdoai-nos as nossas ofensas, assim como nós
+                    perdoamos a quem nos tem ofendido; e não nos deixeis cair em
+                    tentação, mas livrai-nos do mal. Amém.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Contador de dezenas -->
+            <div class="decade-counter">
+              <p class="counter-label">Contador da Dezena</p>
+              <div class="counter-buttons">
+                <button class="counter-button active prayer">Pai Nosso</button>
+                <button class="counter-button active ave-maria">
+                  Ave Maria
+                </button>
+                <button class="counter-button">Ave Maria</button>
+                <button class="counter-button">Ave Maria</button>
+                <button class="counter-button">Ave Maria</button>
+                <button class="counter-button">Ave Maria</button>
+                <button class="counter-button">Ave Maria</button>
+                <button class="counter-button">Ave Maria</button>
+                <button class="counter-button">Ave Maria</button>
+                <button class="counter-button">Ave Maria</button>
+                <button class="counter-button">Ave Maria</button>
+                <button class="counter-button">Glória</button>
+              </div>
+            </div>
+
+            <!-- Controles de navegação -->
+            <div class="navigation-controls">
+              <button class="nav-button back">
+                <span class="material-symbols-outlined">arrow_back</span>
+                Voltar
+              </button>
+              <button class="nav-button next">
+                Avançar
+                <span class="material-symbols-outlined">arrow_forward</span>
+              </button>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+  
+    <script src="../js/app-config.js"></script>
+    <script src="../js/app-state.js"></script>
+    <script src="../js/app-ui.js"></script>
+    <script>
+      FeUI.protectPage();
+      FeUI.renderSidebar("terco");
+    </script>
+  </body>
+</html>

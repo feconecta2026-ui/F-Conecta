@@ -1,0 +1,143 @@
+/* Estilos para ícones do Material Symbols */
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+}
+
+.material-symbols-outlined.fill-icon {
+  font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 24;
+}
+
+/* Animações para melhorar a experiência do usuário */
+.fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card-hover {
+  transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Estilos para o modal */
+.modal-backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+}
+
+.modal-content {
+  max-height: 90vh;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #c8a265 #f3ece4;
+}
+
+.modal-content::-webkit-scrollbar {
+  width: 6px;
+}
+
+.modal-content::-webkit-scrollbar-track {
+  background: #f3ece4;
+  border-radius: 3px;
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+  background-color: #c8a265;
+  border-radius: 3px;
+}
+
+/* Estilos para o menu de filtro */
+.filter-menu {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(184, 154, 122, 0.2);
+}
+
+/* Estilos para estados de foco e acessibilidade */
+button:focus-visible,
+a:focus-visible,
+input:focus-visible {
+  outline: 2px solid #c8a265;
+  outline-offset: 2px;
+}
+
+/* Melhorias de responsividade para telas muito pequenas */
+@media (max-width: 480px) {
+  .prayer-card {
+    padding: 1rem;
+  }
+
+  .prayer-image {
+    height: 120px;
+  }
+}
+
+/* Transições suaves para elementos interativos */
+.transition-all {
+  transition: all 0.3s ease;
+}
+
+/* Estilo para o botão de favorito quando não está selecionado */
+.favorite-toggle:not(.fill-icon) {
+  color: #6c5a4b;
+  border-color: rgba(108, 90, 75, 0.5);
+}
+
+.favorite-toggle:not(.fill-icon):hover {
+  background-color: rgba(108, 90, 75, 0.1);
+}
+
+/* Efeito de loading para busca/filtro */
+.loading {
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+.loading::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  margin: -10px 0 0 -10px;
+  border: 2px solid #f3f3f3;
+  border-top: 2px solid #c8a265;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Melhorias de contraste para modo escuro */
+@media (prefers-color-scheme: dark) {
+  .dark\:bg-background-dark {
+    background-color: #1e1a14;
+  }
+
+  .filter-menu {
+    background-color: #2a241c;
+    border-color: rgba(184, 154, 122, 0.3);
+  }
+}
